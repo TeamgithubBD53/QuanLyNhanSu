@@ -348,6 +348,7 @@
             this.Column24});
             this.dataGridView7.Location = new System.Drawing.Point(127, 352);
             this.dataGridView7.Name = "dataGridView7";
+            this.dataGridView7.RowHeadersWidth = 51;
             this.dataGridView7.RowTemplate.Height = 24;
             this.dataGridView7.Size = new System.Drawing.Size(799, 255);
             this.dataGridView7.TabIndex = 13;
@@ -356,6 +357,7 @@
             // 
             this.Column20.DataPropertyName = "MaNhanVien";
             this.Column20.HeaderText = "Mã nhân viên";
+            this.Column20.MinimumWidth = 6;
             this.Column20.Name = "Column20";
             this.Column20.Width = 150;
             // 
@@ -363,6 +365,7 @@
             // 
             this.Column21.DataPropertyName = "MaBaoHiem";
             this.Column21.HeaderText = "Mã bảo hiểm";
+            this.Column21.MinimumWidth = 6;
             this.Column21.Name = "Column21";
             this.Column21.Width = 150;
             // 
@@ -370,6 +373,7 @@
             // 
             this.Column22.DataPropertyName = "NgayBatDau";
             this.Column22.HeaderText = "Ngày bắt đầu";
+            this.Column22.MinimumWidth = 6;
             this.Column22.Name = "Column22";
             this.Column22.Width = 150;
             // 
@@ -377,6 +381,7 @@
             // 
             this.Column23.DataPropertyName = "NgayHetHan";
             this.Column23.HeaderText = "Ngày hết hạn";
+            this.Column23.MinimumWidth = 6;
             this.Column23.Name = "Column23";
             this.Column23.Width = 150;
             // 
@@ -384,6 +389,7 @@
             // 
             this.Column24.DataPropertyName = "SoTienDongMotThang";
             this.Column24.HeaderText = "Số tiền đóng/tháng";
+            this.Column24.MinimumWidth = 6;
             this.Column24.Name = "Column24";
             this.Column24.Width = 150;
             // 
@@ -542,6 +548,7 @@
             this.Column19});
             this.dataGridView6.Location = new System.Drawing.Point(104, 301);
             this.dataGridView6.Name = "dataGridView6";
+            this.dataGridView6.RowHeadersWidth = 51;
             this.dataGridView6.RowTemplate.Height = 24;
             this.dataGridView6.Size = new System.Drawing.Size(846, 301);
             this.dataGridView6.TabIndex = 11;
@@ -550,6 +557,7 @@
             // 
             this.Column16.DataPropertyName = "MaKTKL";
             this.Column16.HeaderText = "Mã KT, KL";
+            this.Column16.MinimumWidth = 6;
             this.Column16.Name = "Column16";
             this.Column16.Width = 200;
             // 
@@ -557,6 +565,7 @@
             // 
             this.Column17.DataPropertyName = "MaNhanVien";
             this.Column17.HeaderText = "Mã nhân viên";
+            this.Column17.MinimumWidth = 6;
             this.Column17.Name = "Column17";
             this.Column17.Width = 200;
             // 
@@ -564,6 +573,7 @@
             // 
             this.Column18.DataPropertyName = "Ngay";
             this.Column18.HeaderText = "Ngày";
+            this.Column18.MinimumWidth = 6;
             this.Column18.Name = "Column18";
             this.Column18.Width = 200;
             // 
@@ -571,6 +581,7 @@
             // 
             this.Column19.DataPropertyName = "GhiChu";
             this.Column19.HeaderText = "Ghi chú";
+            this.Column19.MinimumWidth = 6;
             this.Column19.Name = "Column19";
             this.Column19.Width = 200;
             // 
@@ -694,6 +705,7 @@
             this.Column15});
             this.dataGridView5.Location = new System.Drawing.Point(155, 317);
             this.dataGridView5.Name = "dataGridView5";
+            this.dataGridView5.RowHeadersWidth = 51;
             this.dataGridView5.RowTemplate.Height = 24;
             this.dataGridView5.Size = new System.Drawing.Size(647, 277);
             this.dataGridView5.TabIndex = 9;
@@ -702,6 +714,7 @@
             // 
             this.Column13.DataPropertyName = "MaKTKL";
             this.Column13.HeaderText = "Mã khen thưởng -  kỉ luật";
+            this.Column13.MinimumWidth = 6;
             this.Column13.Name = "Column13";
             this.Column13.Width = 200;
             // 
@@ -709,6 +722,7 @@
             // 
             this.Column14.DataPropertyName = "Ten";
             this.Column14.HeaderText = "Tên quyết định";
+            this.Column14.MinimumWidth = 6;
             this.Column14.Name = "Column14";
             this.Column14.Width = 200;
             // 
@@ -716,6 +730,7 @@
             // 
             this.Column15.DataPropertyName = "SoTien";
             this.Column15.HeaderText = "Số tiền";
+            this.Column15.MinimumWidth = 6;
             this.Column15.Name = "Column15";
             this.Column15.Width = 200;
             // 
@@ -820,6 +835,7 @@
             this.Column12});
             this.dataGridView4.Location = new System.Drawing.Point(205, 344);
             this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.RowHeadersWidth = 51;
             this.dataGridView4.RowTemplate.Height = 24;
             this.dataGridView4.Size = new System.Drawing.Size(551, 267);
             this.dataGridView4.TabIndex = 0;
@@ -828,6 +844,7 @@
             // 
             this.Column11.DataPropertyName = "MaHinhThucTuyenDung";
             this.Column11.HeaderText = "Mã tuyển dụng";
+            this.Column11.MinimumWidth = 6;
             this.Column11.Name = "Column11";
             this.Column11.Width = 200;
             // 
@@ -835,6 +852,7 @@
             // 
             this.Column12.DataPropertyName = "Ten";
             this.Column12.HeaderText = "Tên tuyển dụng";
+            this.Column12.MinimumWidth = 6;
             this.Column12.Name = "Column12";
             this.Column12.Width = 300;
             // 
@@ -922,6 +940,7 @@
             this.butThem3.Size = new System.Drawing.Size(94, 29);
             this.butThem3.TabIndex = 10;
             this.butThem3.Text = "Thêm";
+            this.butThem3.Click += new System.EventHandler(this.butThem3_Click);
             // 
             // textTiLeBH3
             // 
@@ -958,6 +977,7 @@
             this.Column10});
             this.dataGridView3.Location = new System.Drawing.Point(153, 305);
             this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.RowHeadersWidth = 51;
             this.dataGridView3.RowTemplate.Height = 24;
             this.dataGridView3.Size = new System.Drawing.Size(649, 287);
             this.dataGridView3.TabIndex = 9;
@@ -966,6 +986,7 @@
             // 
             this.Column8.DataPropertyName = "MaBaoHiem";
             this.Column8.HeaderText = "Mã bảo hiểm";
+            this.Column8.MinimumWidth = 6;
             this.Column8.Name = "Column8";
             this.Column8.Width = 200;
             // 
@@ -973,6 +994,7 @@
             // 
             this.Column9.DataPropertyName = "Ten";
             this.Column9.HeaderText = "Tên bảo hiểm";
+            this.Column9.MinimumWidth = 6;
             this.Column9.Name = "Column9";
             this.Column9.Width = 200;
             // 
@@ -980,6 +1002,7 @@
             // 
             this.Column10.DataPropertyName = "TiLeBH";
             this.Column10.HeaderText = "Tỉ lệ bảo hiểm";
+            this.Column10.MinimumWidth = 6;
             this.Column10.Name = "Column10";
             this.Column10.Width = 200;
             // 
@@ -1103,6 +1126,7 @@
             this.Column7});
             this.dataGridView2.Location = new System.Drawing.Point(155, 375);
             this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.Size = new System.Drawing.Size(698, 312);
             this.dataGridView2.TabIndex = 7;
@@ -1111,6 +1135,7 @@
             // 
             this.Column5.DataPropertyName = "MaPhongBan";
             this.Column5.HeaderText = "Mã phòng ban";
+            this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
             this.Column5.Width = 200;
             // 
@@ -1118,6 +1143,7 @@
             // 
             this.column6.DataPropertyName = "Ten";
             this.column6.HeaderText = "Tên phòng ban";
+            this.column6.MinimumWidth = 6;
             this.column6.Name = "column6";
             this.column6.Width = 250;
             // 
@@ -1125,6 +1151,7 @@
             // 
             this.Column7.DataPropertyName = "DienThoai";
             this.Column7.HeaderText = "Số điện thoại";
+            this.Column7.MinimumWidth = 6;
             this.Column7.Name = "Column7";
             this.Column7.Width = 200;
             // 
@@ -1248,6 +1275,7 @@
             this.Column3});
             this.dataGridView1.Location = new System.Drawing.Point(152, 344);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(651, 347);
             this.dataGridView1.TabIndex = 6;
@@ -1256,6 +1284,7 @@
             // 
             this.Column1.DataPropertyName = "MaChucVu";
             this.Column1.HeaderText = "Mã chức vụ";
+            this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.Width = 200;
             // 
@@ -1263,6 +1292,7 @@
             // 
             this.Column2.DataPropertyName = "Ten";
             this.Column2.HeaderText = "Tên chức vụ";
+            this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.Width = 200;
             // 
@@ -1270,6 +1300,7 @@
             // 
             this.Column3.DataPropertyName = "PhuCap";
             this.Column3.HeaderText = "Phụ cấp";
+            this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             this.Column3.Width = 200;
             // 

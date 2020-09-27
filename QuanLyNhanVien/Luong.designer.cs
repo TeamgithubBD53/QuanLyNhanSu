@@ -325,13 +325,17 @@
             this.column5});
             this.dataGridView1.Location = new System.Drawing.Point(158, 341);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(766, 332);
-            this.dataGridView1.TabIndex = 15;            // 
+            this.dataGridView1.TabIndex = 15;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
             // Column1
             // 
             this.Column1.DataPropertyName = "MaLuong";
             this.Column1.HeaderText = "Mã lương";
+            this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.Width = 130;
             // 
@@ -339,6 +343,7 @@
             // 
             this.Column2.DataPropertyName = "MaNhanVien";
             this.Column2.HeaderText = "Mã nhân viên";
+            this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.Width = 130;
             // 
@@ -346,6 +351,7 @@
             // 
             this.Column3.DataPropertyName = "LuongHD";
             this.Column3.HeaderText = "Lương thực tế";
+            this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             this.Column3.Width = 150;
             // 
@@ -353,6 +359,7 @@
             // 
             this.Column4.DataPropertyName = "SoNgayCong";
             this.Column4.HeaderText = "Số ngày công";
+            this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             this.Column4.Width = 150;
             // 
@@ -360,6 +367,7 @@
             // 
             this.column5.DataPropertyName = "ThangNam";
             this.column5.HeaderText = "Tháng/Năm";
+            this.column5.MinimumWidth = 6;
             this.column5.Name = "column5";
             this.column5.Width = 150;
             // 
