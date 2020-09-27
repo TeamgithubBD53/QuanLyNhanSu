@@ -167,6 +167,7 @@
             this.butLuu1.Size = new System.Drawing.Size(94, 29);
             this.butLuu1.TabIndex = 20;
             this.butLuu1.Text = "Lưu";
+            this.butLuu1.Click += new System.EventHandler(this.butLuu1_Click);
             // 
             // butXoa1
             // 
@@ -175,6 +176,7 @@
             this.butXoa1.Size = new System.Drawing.Size(94, 29);
             this.butXoa1.TabIndex = 19;
             this.butXoa1.Text = "Xóa";
+            this.butXoa1.Click += new System.EventHandler(this.butXoa1_Click);
             // 
             // butThem1
             // 
@@ -183,6 +185,7 @@
             this.butThem1.Size = new System.Drawing.Size(94, 29);
             this.butThem1.TabIndex = 17;
             this.butThem1.Text = "Thêm";
+            this.butThem1.Click += new System.EventHandler(this.butThem1_Click);
             // 
             // label3
             // 
@@ -200,6 +203,7 @@
             this.butSua1.Size = new System.Drawing.Size(94, 29);
             this.butSua1.TabIndex = 18;
             this.butSua1.Text = "Sửa";
+            this.butSua1.Click += new System.EventHandler(this.butSua1_Click);
             // 
             // textThang
             // 
@@ -256,6 +260,7 @@
             this.butXuat.Size = new System.Drawing.Size(94, 29);
             this.butXuat.TabIndex = 22;
             this.butXuat.Text = "Xuất EXCEL";
+            this.butXuat.Click += new System.EventHandler(this.butXuat_Click);
             // 
             // layoutControl1
             // 
@@ -277,6 +282,7 @@
             this.searchLookUpEdit1.Size = new System.Drawing.Size(334, 22);
             this.searchLookUpEdit1.StyleController = this.layoutControl1;
             this.searchLookUpEdit1.TabIndex = 4;
+            this.searchLookUpEdit1.EditValueChanged += new System.EventHandler(this.searchLookUpEdit1_EditValueChanged);
             // 
             // searchLookUpEdit1View
             // 

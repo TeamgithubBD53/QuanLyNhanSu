@@ -58,5 +58,101 @@ namespace QuanLyNhanVien
             }
 
         }
+
+        private void searchLookUpEdit1_EditValueChanged(object sender, EventArgs e)
+        {
+            var view = searchLookUpEdit1.Properties.View;
+            int rowHandle = view.FocusedRowHandle;
+            string fieldName1 = "Mã lương";
+            string fieldName2 = "Mã nhân viên";
+            string fieldName3 = "Lương";
+            string fieldName4 = "Số ngày công";
+            string fieldName5 = "Tháng/năm";
+            object value1 = view.GetRowCellValue(rowHandle, fieldName1);
+            object value2 = view.GetRowCellValue(rowHandle, fieldName2);
+            object value3 = view.GetRowCellValue(rowHandle, fieldName3);
+            object value4 = view.GetRowCellValue(rowHandle, fieldName4);
+            object value5 = view.GetRowCellValue(rowHandle, fieldName5);
+            textMaLuong.Text = value1.ToString();
+            textMaNV.Text = value2.ToString();
+            textLuongHD.Text = value3.ToString();
+            textSoNgayCong.Text = value4.ToString();
+            textThang.Text = value5.ToString();
+
+        }
+
+        private void butThem1_Click(object sender, EventArgs e)
+        {
+            kt1 = 1;
+        }
+
+        private void butSua1_Click(object sender, EventArgs e)
+        {
+            kt1 = 2;
+        }
+
+        private void butXoa1_Click(object sender, EventArgs e)
+        {
+            kt1 = 3;
+        }
+
+        private void butLuu1_Click(object sender, EventArgs e)
+        {
+            KetNoi kn = new KetNoi();
+            if (kt1 == 1)
+            {
+                if (kn.LoadDataDK("LuongDK", "@MaLuong", textMaLuong.Text).Rows.Count == 1)
+                    XtraMessageBox.Show("Mã Lương đã có trong danh sách");
+                else
+                {
+                    kn.LuongNV("ThemLuong", textMaLuong.Text, textMaNV.Text, textLuongHD.Text, textSoNgayCong.Text, textThang.Text);
+                }
+            }
+            else if (kt1 == 2)
+            {
+                if (kn.LoadDataDK("LuongDK", "@MaLuong", textMaLuong.Text).Rows.Count == 0)
+                    XtraMessageBox.Show("Không tìm thấy mã Lương để sửa ");
+                else
+                {
+                    kn.LuongNV("SuaLuong", textMaLuong.Text, textMaNV.Text, textLuongHD.Text, textSoNgayCong.Text, textThang.Text);
+                }
+            }
+            else if (kt1 == 3)
+            {
+                try
+                {
+                    if (kn.LoadDataDK("LuongDK", "@MaLuong", textMaLuong.Text).Rows.Count == 0)
+                        XtraMessageBox.Show("Không tìm thấy mã lương để xóa ");
+                    else
+                    {
+                        kn.Xoa("XoaLuong", "@MaLuong", textMaLuong.Text);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    XtraMessageBox.Show(ex.Message);
+                }
+
+            }
+            getData1();
+            kt1 = 0;
+
+        }
+
+        private void butXuat_Click(object sender, EventArgs e)
+        {
+            KetNoi kn = new KetNoi();
+            DataTable dt = kn.LoadData("XuatDanhSachLuongNV");
+
+            if (dt.Rows.Count == 0)
+                XtraMessageBox.Show("Không có dữ liệu để xuất");
+            else
+            {
+
+                kn.LoadDataSet("XuatDanhSachLuongNV").WriteXml(@"D:\'Danh sách lương nhân viên'.xls");
+                XtraMessageBox.Show("Xuất thành công");
+            }
+
+        }
     }
 }
