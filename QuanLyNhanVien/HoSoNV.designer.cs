@@ -31,6 +31,7 @@
             this.tabNhanVien = new System.Windows.Forms.TabControl();
             this.tabThongTinCN = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.textNgaySinh1 = new DevExpress.XtraEditors.DateEdit();
             this.textMaCV1 = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.butLuu1 = new DevExpress.XtraEditors.SimpleButton();
@@ -89,6 +90,8 @@
             this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabHD = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textNgayKetThuc2 = new DevExpress.XtraEditors.DateEdit();
+            this.textNgayBD2 = new DevExpress.XtraEditors.DateEdit();
             this.butThem2 = new DevExpress.XtraEditors.SimpleButton();
             this.butSua2 = new DevExpress.XtraEditors.SimpleButton();
             this.butXoa2 = new DevExpress.XtraEditors.SimpleButton();
@@ -102,9 +105,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.textNgayBD2 = new DevExpress.XtraEditors.DateEdit();
-            this.textNgayKetThuc2 = new DevExpress.XtraEditors.DateEdit();
-            this.textNgaySinh1 = new DevExpress.XtraEditors.DateEdit();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -113,6 +113,8 @@
             this.tabNhanVien.SuspendLayout();
             this.tabThongTinCN.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textNgaySinh1.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textNgaySinh1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1.Properties)).BeginInit();
@@ -123,13 +125,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabHD.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textNgayBD2.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textNgayBD2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textNgayKetThuc2.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textNgayKetThuc2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textNgaySinh1.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textNgaySinh1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textNgayBD2.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textNgayBD2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabNhanVien
@@ -197,6 +197,18 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(974, 364);
             this.panel2.TabIndex = 46;
+            // 
+            // textNgaySinh1
+            // 
+            this.textNgaySinh1.EditValue = null;
+            this.textNgaySinh1.Location = new System.Drawing.Point(755, 163);
+            this.textNgaySinh1.Name = "textNgaySinh1";
+            this.textNgaySinh1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.textNgaySinh1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.textNgaySinh1.Size = new System.Drawing.Size(156, 22);
+            this.textNgaySinh1.TabIndex = 43;
             // 
             // textMaCV1
             // 
@@ -283,6 +295,7 @@
             this.butThem1.Size = new System.Drawing.Size(89, 29);
             this.butThem1.TabIndex = 39;
             this.butThem1.Text = "Thêm";
+            this.butThem1.Click += new System.EventHandler(this.butThem1_Click);
             // 
             // label9
             // 
@@ -553,6 +566,7 @@
             this.Column20});
             this.dataGridView1.Location = new System.Drawing.Point(35, 462);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(974, 240);
             this.dataGridView1.TabIndex = 21;
@@ -561,91 +575,121 @@
             // 
             this.column6.DataPropertyName = "MaNhanVien";
             this.column6.HeaderText = "Mã nhân viên";
+            this.column6.MinimumWidth = 6;
             this.column6.Name = "column6";
+            this.column6.Width = 125;
             // 
             // Column7
             // 
             this.Column7.DataPropertyName = "MaHinhThucTuyenDung";
             this.Column7.HeaderText = "Mã tuyển dụng";
+            this.Column7.MinimumWidth = 6;
             this.Column7.Name = "Column7";
+            this.Column7.Width = 125;
             // 
             // Column8
             // 
             this.Column8.DataPropertyName = "MaChucVu";
             this.Column8.HeaderText = "Mã chức vụ";
+            this.Column8.MinimumWidth = 6;
             this.Column8.Name = "Column8";
+            this.Column8.Width = 125;
             // 
             // column9
             // 
             this.column9.DataPropertyName = "MaPhongBan";
             this.column9.HeaderText = "Mã phòng ban";
+            this.column9.MinimumWidth = 6;
             this.column9.Name = "column9";
+            this.column9.Width = 125;
             // 
             // Column10
             // 
             this.Column10.DataPropertyName = "HoTen";
             this.Column10.HeaderText = "Họ tên";
+            this.Column10.MinimumWidth = 6;
             this.Column10.Name = "Column10";
+            this.Column10.Width = 125;
             // 
             // Column11
             // 
             this.Column11.DataPropertyName = "NgaySinh";
             this.Column11.HeaderText = "Ngày sinh";
+            this.Column11.MinimumWidth = 6;
             this.Column11.Name = "Column11";
+            this.Column11.Width = 125;
             // 
             // Column12
             // 
             this.Column12.DataPropertyName = "QueQuan";
             this.Column12.HeaderText = "Quê quán";
+            this.Column12.MinimumWidth = 6;
             this.Column12.Name = "Column12";
+            this.Column12.Width = 125;
             // 
             // Column13
             // 
             this.Column13.DataPropertyName = "GioiTinh";
             this.Column13.HeaderText = "Giới tính";
+            this.Column13.MinimumWidth = 6;
             this.Column13.Name = "Column13";
+            this.Column13.Width = 125;
             // 
             // Column14
             // 
             this.Column14.DataPropertyName = "SoCMND";
             this.Column14.HeaderText = "CMND";
+            this.Column14.MinimumWidth = 6;
             this.Column14.Name = "Column14";
+            this.Column14.Width = 125;
             // 
             // Column15
             // 
             this.Column15.DataPropertyName = "TrinhDo";
             this.Column15.HeaderText = "Trình độ";
+            this.Column15.MinimumWidth = 6;
             this.Column15.Name = "Column15";
+            this.Column15.Width = 125;
             // 
             // Column16
             // 
             this.Column16.DataPropertyName = "SDT";
             this.Column16.HeaderText = "SĐT";
+            this.Column16.MinimumWidth = 6;
             this.Column16.Name = "Column16";
+            this.Column16.Width = 125;
             // 
             // Column17
             // 
             this.Column17.DataPropertyName = "NoiLamViec";
             this.Column17.HeaderText = "Nơi làm việc";
+            this.Column17.MinimumWidth = 6;
             this.Column17.Name = "Column17";
+            this.Column17.Width = 125;
             // 
             // Column18
             // 
             this.Column18.DataPropertyName = "NoiO";
             this.Column18.HeaderText = "Nơi ở";
+            this.Column18.MinimumWidth = 6;
             this.Column18.Name = "Column18";
+            this.Column18.Width = 125;
             // 
             // Column19
             // 
             this.Column19.DataPropertyName = "NoiSinh";
             this.Column19.HeaderText = "Nơi sinh";
+            this.Column19.MinimumWidth = 6;
             this.Column19.Name = "Column19";
+            this.Column19.Width = 125;
             // 
             // Column20
             // 
             this.Column20.DataPropertyName = "Email";
             this.Column20.HeaderText = "Email";
+            this.Column20.MinimumWidth = 6;
             this.Column20.Name = "Column20";
+            this.Column20.Width = 125;
             // 
             // tabHD
             // 
@@ -680,6 +724,30 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(825, 293);
             this.panel1.TabIndex = 21;
+            // 
+            // textNgayKetThuc2
+            // 
+            this.textNgayKetThuc2.EditValue = null;
+            this.textNgayKetThuc2.Location = new System.Drawing.Point(546, 137);
+            this.textNgayKetThuc2.Name = "textNgayKetThuc2";
+            this.textNgayKetThuc2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.textNgayKetThuc2.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.textNgayKetThuc2.Size = new System.Drawing.Size(178, 22);
+            this.textNgayKetThuc2.TabIndex = 20;
+            // 
+            // textNgayBD2
+            // 
+            this.textNgayBD2.EditValue = null;
+            this.textNgayBD2.Location = new System.Drawing.Point(193, 142);
+            this.textNgayBD2.Name = "textNgayBD2";
+            this.textNgayBD2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.textNgayBD2.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.textNgayBD2.Size = new System.Drawing.Size(174, 22);
+            this.textNgayBD2.TabIndex = 19;
             // 
             // butThem2
             // 
@@ -792,50 +860,16 @@
             this.Column5});
             this.dataGridView2.Location = new System.Drawing.Point(97, 344);
             this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.Size = new System.Drawing.Size(825, 308);
             this.dataGridView2.TabIndex = 13;
-            // 
-            // textNgayBD2
-            // 
-            this.textNgayBD2.EditValue = null;
-            this.textNgayBD2.Location = new System.Drawing.Point(193, 142);
-            this.textNgayBD2.Name = "textNgayBD2";
-            this.textNgayBD2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.textNgayBD2.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.textNgayBD2.Size = new System.Drawing.Size(174, 22);
-            this.textNgayBD2.TabIndex = 19;
-            // 
-            // textNgayKetThuc2
-            // 
-            this.textNgayKetThuc2.EditValue = null;
-            this.textNgayKetThuc2.Location = new System.Drawing.Point(546, 137);
-            this.textNgayKetThuc2.Name = "textNgayKetThuc2";
-            this.textNgayKetThuc2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.textNgayKetThuc2.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.textNgayKetThuc2.Size = new System.Drawing.Size(178, 22);
-            this.textNgayKetThuc2.TabIndex = 20;
-            // 
-            // textNgaySinh1
-            // 
-            this.textNgaySinh1.EditValue = null;
-            this.textNgaySinh1.Location = new System.Drawing.Point(755, 163);
-            this.textNgaySinh1.Name = "textNgaySinh1";
-            this.textNgaySinh1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.textNgaySinh1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.textNgaySinh1.Size = new System.Drawing.Size(156, 22);
-            this.textNgaySinh1.TabIndex = 43;
             // 
             // Column1
             // 
             this.Column1.DataPropertyName = "MaHD";
             this.Column1.HeaderText = "Mã hợp đồng";
+            this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.Width = 130;
             // 
@@ -843,6 +877,7 @@
             // 
             this.Column2.DataPropertyName = "MaNhanVien";
             this.Column2.HeaderText = "Mã nhân viên";
+            this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.Width = 130;
             // 
@@ -850,6 +885,7 @@
             // 
             this.column3.DataPropertyName = "LuongHD";
             this.column3.HeaderText = "Lương cơ bản";
+            this.column3.MinimumWidth = 6;
             this.column3.Name = "column3";
             this.column3.Width = 150;
             // 
@@ -857,6 +893,7 @@
             // 
             this.Column4.DataPropertyName = "NgayBatDau";
             this.Column4.HeaderText = "Ngày bắt đầu";
+            this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             this.Column4.Width = 180;
             // 
@@ -864,6 +901,7 @@
             // 
             this.Column5.DataPropertyName = "NgayKetThuc";
             this.Column5.HeaderText = "Ngày kết thúc";
+            this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
             this.Column5.Width = 180;
             // 
@@ -880,6 +918,8 @@
             this.tabThongTinCN.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textNgaySinh1.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textNgaySinh1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1.Properties)).EndInit();
@@ -891,13 +931,11 @@
             this.tabHD.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textNgayBD2.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textNgayBD2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textNgayKetThuc2.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textNgayKetThuc2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textNgaySinh1.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textNgaySinh1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textNgayBD2.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textNgayBD2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
