@@ -508,6 +508,7 @@
             this.searchLookUpEdit1.Size = new System.Drawing.Size(731, 22);
             this.searchLookUpEdit1.StyleController = this.layoutControl1;
             this.searchLookUpEdit1.TabIndex = 4;
+            this.searchLookUpEdit1.EditValueChanged += new System.EventHandler(this.searchLookUpEdit1_EditValueChanged);
             // 
             // searchLookUpEdit1View
             // 
@@ -570,6 +571,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(974, 240);
             this.dataGridView1.TabIndex = 21;
+            this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
             // 
             // column6
             // 
@@ -864,6 +866,7 @@
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.Size = new System.Drawing.Size(825, 308);
             this.dataGridView2.TabIndex = 13;
+            this.dataGridView2.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView2_CellMouseClick);
             // 
             // Column1
             // 
