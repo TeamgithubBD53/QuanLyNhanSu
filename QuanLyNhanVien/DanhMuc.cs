@@ -27,21 +27,21 @@ namespace QuanLyNhanVien
             KetNoi kn = new KetNoi();
             dataGridView3.DataSource = kn.LoadData("DanhSachBH");
         }
-        private void dataGridView3_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            try
-            {
-                DataGridViewRow row = new DataGridViewRow();
-                row = dataGridView3.Rows[e.RowIndex];
-                textMaBH3.Text = row.Cells[0].Value.ToString();
-                textTenBH3.Text = row.Cells[1].Value.ToString();
-                textTiLeBH3.Text = row.Cells[2].Value.ToString();
-            }
-            catch (Exception ex)
-            {
-                XtraMessageBox.Show(ex.Message);
-            }
-        }
+        //private void dataGridView3_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        //{
+        //    try
+        //    {
+        //        DataGridViewRow row = new DataGridViewRow();
+        //        row = dataGridView3.Rows[e.RowIndex];
+        //        textMaBH3.Text = row.Cells[0].Value.ToString();
+        //        textTenBH3.Text = row.Cells[1].Value.ToString();
+        //        textTiLeBH3.Text = row.Cells[2].Value.ToString();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        XtraMessageBox.Show(ex.Message);
+        //    }
+        //}
         //bao hiem
 
         private void butSua3_Click(object sender, EventArgs e)
@@ -100,6 +100,20 @@ namespace QuanLyNhanVien
             kt3 = 0;
         }
 
+        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                DataGridViewRow row = new DataGridViewRow();
+                row = dataGridView3.Rows[e.RowIndex];
+                textMaBH3.Text = row.Cells[0].Value.ToString();
+                textTenBH3.Text = row.Cells[1].Value.ToString();
+                textTiLeBH3.Text = row.Cells[2].Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message);
+            }
     }
 
 }
