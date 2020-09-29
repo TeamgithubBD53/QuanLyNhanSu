@@ -156,15 +156,7 @@ namespace QuanLyNhanVien
         {
             kt2 = 1;
         }
-        private void butSua2_Click(object sender, EventArgs e)
-        {
-            kt2 = 2;
-        }
 
-        private void butXoa2_Click(object sender, EventArgs e)
-        {
-            kt2 = 3;
-        }
 
         private void butLuu2_Click(object sender, EventArgs e)
         {
@@ -220,6 +212,16 @@ namespace QuanLyNhanVien
                 kn.LoadDataSet("XuatDanhSachNV").WriteXml(@"D:\'Danh sách nhân viên'.xls");
                 XtraMessageBox.Show("Xuất thành công");
             }
+        }
+
+        private void butSua2_Click_1(object sender, EventArgs e)
+        {
+            kt2 = 2;
+        }
+
+        private void butXoa2_Click(object sender, EventArgs e)
+        {
+            kt2 = 3;
         }
     }
 }
