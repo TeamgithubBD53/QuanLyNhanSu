@@ -769,6 +769,7 @@
             this.butSua4.Size = new System.Drawing.Size(94, 29);
             this.butSua4.TabIndex = 8;
             this.butSua4.Text = "Sửa";
+            this.butSua4.Click += new System.EventHandler(this.butSua4_Click);
             // 
             // butLuu4
             // 
@@ -777,6 +778,7 @@
             this.butLuu4.Size = new System.Drawing.Size(94, 29);
             this.butLuu4.TabIndex = 10;
             this.butLuu4.Text = "Lưu";
+            this.butLuu4.Click += new System.EventHandler(this.butLuu4_Click);
             // 
             // textMaTD4
             // 
@@ -792,6 +794,7 @@
             this.butXoa4.Size = new System.Drawing.Size(94, 29);
             this.butXoa4.TabIndex = 9;
             this.butXoa4.Text = "Xóa";
+            this.butXoa4.Click += new System.EventHandler(this.butXoa4_Click);
             // 
             // textTenTD4
             // 
@@ -816,6 +819,7 @@
             this.butThem4.Size = new System.Drawing.Size(94, 29);
             this.butThem4.TabIndex = 7;
             this.butThem4.Text = "Thêm ";
+            this.butThem4.Click += new System.EventHandler(this.butThem4_Click);
             // 
             // label12
             // 
@@ -839,6 +843,7 @@
             this.dataGridView4.RowTemplate.Height = 24;
             this.dataGridView4.Size = new System.Drawing.Size(551, 267);
             this.dataGridView4.TabIndex = 0;
+            this.dataGridView4.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView4_CellMouseClick);
             // 
             // Column11
             // 
