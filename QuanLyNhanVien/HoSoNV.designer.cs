@@ -758,6 +758,7 @@
             this.butThem2.Size = new System.Drawing.Size(94, 29);
             this.butThem2.TabIndex = 14;
             this.butThem2.Text = "Thêm";
+            this.butThem2.Click += new System.EventHandler(this.butThem2_Click);
             // 
             // butSua2
             // 
@@ -782,6 +783,7 @@
             this.butLuu2.Size = new System.Drawing.Size(94, 35);
             this.butLuu2.TabIndex = 18;
             this.butLuu2.Text = "Lưu";
+            this.butLuu2.Click += new System.EventHandler(this.butLuu2_Click);
             // 
             // textMaNV2
             // 

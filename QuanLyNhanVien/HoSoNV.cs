@@ -151,5 +151,75 @@ namespace QuanLyNhanVien
             textNoiSinh.Text = value14.ToString();
             textEmail.Text = value15.ToString();
         }
+        //hopdong
+        private void butThem2_Click(object sender, EventArgs e)
+        {
+            kt2 = 1;
+        }
+        private void butSua2_Click(object sender, EventArgs e)
+        {
+            kt2 = 2;
+        }
+
+        private void butXoa2_Click(object sender, EventArgs e)
+        {
+            kt2 = 3;
+        }
+
+        private void butLuu2_Click(object sender, EventArgs e)
+        {
+            KetNoi kn = new KetNoi();
+            if (kt2 == 1)
+            {
+                if (kn.LoadDataDK("HopDongDK", "@MaHD", textMaHD2.Text).Rows.Count == 1)
+                    XtraMessageBox.Show("Mã hợp đồng đã có trong danh sách");
+                else
+                {
+                    kn.HopDong("ThemHD", textMaHD2.Text, textMaNV2.Text, textLuongHD2.Text, textNgayBD2.Text, textNgayKetThuc2.Text);
+                }
+            }
+            else if (kt2 == 2)
+            {
+                if (kn.LoadDataDK("HopDongDK", "@MaHD", textMaHD2.Text).Rows.Count == 0)
+                    XtraMessageBox.Show("Mã hợp đồng chưa có trong danh sách");
+                else
+                {
+                    kn.HopDong("SuaHD", textMaHD2.Text, textMaNV2.Text, textLuongHD2.Text, textNgayBD2.Text, textNgayKetThuc2.Text);
+                }
+            }
+            else if (kt2 == 3)
+            {
+                try
+                {
+                    if (kn.LoadDataDK("HopDongDK", "@MaHD", textMaHD2.Text).Rows.Count == 0)
+                        XtraMessageBox.Show("Không tìm thấy mã hợp đồng để xóa ");
+                    else
+                    {
+                        kn.Xoa("XoaHD", "@MaHD", textMaHD2.Text);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    XtraMessageBox.Show(ex.Message);
+                }
+
+            }
+            getData2();
+            kt2 = 0;
+        }
+        private void butXuat_Click(object sender, EventArgs e)
+        {
+            KetNoi kn = new KetNoi();
+            DataTable dt = kn.LoadData("XuatDanhSachNV");
+
+            if (dt.Rows.Count == 0)
+                XtraMessageBox.Show("Không có dữ liệu để xuất");
+            else
+            {
+
+                kn.LoadDataSet("XuatDanhSachNV").WriteXml(@"D:\'Danh sách nhân viên'.xls");
+                XtraMessageBox.Show("Xuất thành công");
+            }
+        }
     }
 }

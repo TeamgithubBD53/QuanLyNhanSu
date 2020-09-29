@@ -14,7 +14,7 @@ namespace QuanLyNhanVien
     public partial class DanhMuc : DevExpress.XtraEditors.XtraForm
     {
         public static int kt3 = 0; // kiểm tra thêm, sửa, xóa bao hiem
-       
+
         public DanhMuc()
         {
             InitializeComponent();
@@ -114,6 +114,6 @@ namespace QuanLyNhanVien
             {
                 XtraMessageBox.Show(ex.Message);
             }
+        }
     }
-
 }
