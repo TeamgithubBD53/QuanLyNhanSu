@@ -24,6 +24,10 @@ namespace QuanLyNhanVien
 
             dataGridView4.ReadOnly = true;
             getData4();
+
+            dataGridView7.ReadOnly = true;
+            textSoTien7.ReadOnly = true;
+            getData7();
         }
         public void getData3()
         {
@@ -199,6 +203,92 @@ namespace QuanLyNhanVien
             }
             getData4();
             kt4 = 0;
+        }
+
+        //Danh sach bao hiem
+
+        public static int kt7 = 0; // kiểm tra thêm, sửa, xóa
+
+        public void getData7()
+        {
+            KetNoi kn = new KetNoi();
+            dataGridView7.DataSource = kn.LoadData("BHNhanVien");
+        }
+
+        private void butThem7_Click(object sender, EventArgs e)
+        {
+            kt7 = 1;
+        }
+
+        private void butSua7_Click(object sender, EventArgs e)
+        {
+            kt7 = 2;
+        }
+
+        private void butXoa7_Click(object sender, EventArgs e)
+        {
+            kt7 = 3;
+        }
+
+        private void butLuu7_Click(object sender, EventArgs e)
+        {
+            KetNoi kn = new KetNoi();
+            if (kt7 == 1)
+            {
+                if (kn.LoadDataDK_2DK("DanhSachBHNV", "@MaBH", "@MaNV", textMaBH7.Text, textMaNV7.Text).Rows.Count == 1)
+                    XtraMessageBox.Show("Mã bảo hiểm này đã có trong danh sách");
+                else
+                {
+                    kn.BaoHiemNV("ThemBaoHiemNV", textMaBH7.Text, textMaNV7.Text, textNgayBD7.Text, textNgayKT7.Text, textSoTien7.Text);
+                }
+            }
+            else if (kt7 == 2)
+            {
+
+                if (kn.LoadDataDK_2DK("DanhSachBHNV", "@MaBH", "@MaNV", textMaBH7.Text, textMaNV7.Text).Rows.Count == 0)
+                    XtraMessageBox.Show("Mã bảo hiểm này chưa có trong danh sách");
+                else
+                {
+                    kn.BaoHiemNV("SuaBaoHiemNV", textMaBH7.Text, textMaNV7.Text, textNgayBD7.Text, textNgayKT7.Text, textSoTien7.Text);
+                }
+            }
+            else if (kt7 == 3)
+            {
+                try
+                {
+                    if (kn.LoadDataDK_2DK("DanhSachBHNV", "@MaBH", "@MaNV", textMaBH7.Text, textMaNV7.Text).Rows.Count == 0)
+                        XtraMessageBox.Show("Mã bảo hiểm này đã có trong danh sách");
+                    else
+                    {
+                        kn.Xoa_2DK("XoaBaoHiemNV", "@MaBH", "@MaNV", textMaBH7.Text, textMaNV7.Text);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    XtraMessageBox.Show(ex.Message);
+                }
+
+            }
+            getData7();
+            kt7 = 0;
+        }
+
+        private void dataGridView7_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            try
+            {
+                DataGridViewRow row = new DataGridViewRow();
+                row = dataGridView7.Rows[e.RowIndex];
+                textMaNV7.Text = row.Cells[0].Value.ToString();
+                textMaBH7.Text = row.Cells[1].Value.ToString();
+                textNgayBD7.Text = row.Cells[2].Value.ToString().Substring(0, 10);
+                textNgayKT7.Text = row.Cells[3].Value.ToString().Substring(0, 10);
+                textSoTien7.Text = row.Cells[4].Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message);
+            }
         }
     }
 }
