@@ -234,6 +234,7 @@
             this.butLuu1.Size = new System.Drawing.Size(94, 29);
             this.butLuu1.TabIndex = 42;
             this.butLuu1.Text = "Lưu";
+            this.butLuu1.Click += new System.EventHandler(this.butLuu1_Click);
             // 
             // label13
             // 
@@ -331,6 +332,7 @@
             this.butSua1.Size = new System.Drawing.Size(94, 29);
             this.butSua1.TabIndex = 40;
             this.butSua1.Text = "Sửa";
+            this.butSua1.Click += new System.EventHandler(this.butSua1_Click);
             // 
             // textMaPB1
             // 
@@ -347,6 +349,7 @@
             this.butXoa1.Size = new System.Drawing.Size(94, 29);
             this.butXoa1.TabIndex = 41;
             this.butXoa1.Text = "Xóa";
+            this.butXoa1.Click += new System.EventHandler(this.butXoa1_Click);
             // 
             // textNoiO
             // 
@@ -487,6 +490,7 @@
             this.butXuat.Size = new System.Drawing.Size(94, 29);
             this.butXuat.TabIndex = 45;
             this.butXuat.Text = "Xuất EXCEL ";
+            this.butXuat.Click += new System.EventHandler(this.butXuat_Click_1);
             // 
             // layoutControl1
             // 

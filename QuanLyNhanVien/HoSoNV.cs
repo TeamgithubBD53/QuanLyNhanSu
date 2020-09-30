@@ -49,10 +49,7 @@ namespace QuanLyNhanVien
             KetNoi kn = new KetNoi();
             dataGridView2.DataSource = kn.LoadData("DanhSachHD");
         }
-        private void butThem1_Click(object sender, EventArgs e)
-        {
-            kt1 = 1;
-        }
+       
 
         private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -151,6 +148,65 @@ namespace QuanLyNhanVien
             textNoiSinh.Text = value14.ToString();
             textEmail.Text = value15.ToString();
         }
+        private void butThem1_Click(object sender, EventArgs e)
+        {
+            kt1 = 1;
+        }
+        private void butSua1_Click(object sender, EventArgs e)
+        {
+            kt1 = 2;
+        }
+        private void butXoa1_Click(object sender, EventArgs e)
+        {
+            kt1 = 3;
+        }
+        private void butLuu1_Click(object sender, EventArgs e)
+        {
+            KetNoi kn = new KetNoi();
+            if (kt1 == 1)
+            {
+                if (kn.LoadDataDK("NhanVienDK", "@MaNV", textMaNV1.Text).Rows.Count == 1)
+                    XtraMessageBox.Show("Mã nhân viên đã có trong danh sách");
+                else
+                {
+                    kn.DanhSachNV("ThemNV", textMaNV1.Text, textMaTD1.Text, textMaCV1.Text, textMaPB1.Text, textNoiLamViec.Text, textHoTen.Text, textNgaySinh1.Text, textQueQuan1.Text
+                        , textGioiTinh1.Text, textCMND.Text, textTrinhDo1.Text, textSDT1.Text, textEmail.Text, textNoiO.Text, textNoiSinh.Text);
+                }
+            }
+            else if (kt1 == 2)
+            {
+                if (kn.LoadDataDK("NhanVienDK", "@MaNV", textMaNV1.Text).Rows.Count == 0)
+                    XtraMessageBox.Show("Mã nhân viên chưa có trong danh sách");
+                else
+                {
+                    kn.DanhSachNV("SuaNV", textMaNV1.Text, textMaTD1.Text, textMaCV1.Text, textMaPB1.Text, textNoiLamViec.Text, textHoTen.Text, textNgaySinh1.Text, textQueQuan1.Text
+                        , textGioiTinh1.Text, textCMND.Text, textTrinhDo1.Text, textSDT1.Text, textEmail.Text, textNoiO.Text, textNoiSinh.Text);
+                }
+            }
+            else if (kt1 == 3)
+            {
+                try
+                {
+                    if (kn.LoadDataDK("NhanVienDK", "@MaNV", textMaNV1.Text).Rows.Count == 0)
+                        XtraMessageBox.Show("Không tìm thấy mã nhân viên để xóa ");
+                    else
+                    {
+                        kn.Xoa("XoaNV", "@MaNV", textMaNV1.Text);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    XtraMessageBox.Show(ex.Message);
+                }
+
+            }
+            getData1();
+            kt1 = 0;
+        }
+        private void butXuat_Click_1(object sender, EventArgs e)
+        {
+
+        }
         //hopdong
         private void butThem2_Click(object sender, EventArgs e)
         {
@@ -223,5 +279,7 @@ namespace QuanLyNhanVien
         {
             kt2 = 3;
         }
+
+       
     }
 }
