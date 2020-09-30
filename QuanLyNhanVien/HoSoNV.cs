@@ -205,7 +205,17 @@ namespace QuanLyNhanVien
         }
         private void butXuat_Click_1(object sender, EventArgs e)
         {
+            KetNoi kn = new KetNoi();
+            DataTable dt = kn.LoadData("XuatDanhSachNV");
 
+            if (dt.Rows.Count == 0)
+                XtraMessageBox.Show("Không có dữ liệu để xuất");
+            else
+            {
+
+                kn.LoadDataSet("XuatDanhSachNV").WriteXml(@"D:\'Danh sách nhân viên'.xls");
+                XtraMessageBox.Show("Xuất thành công");
+            }
         }
         //hopdong
         private void butThem2_Click(object sender, EventArgs e)
