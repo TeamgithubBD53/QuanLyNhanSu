@@ -477,6 +477,7 @@
             this.butLuu6.Size = new System.Drawing.Size(89, 29);
             this.butLuu6.TabIndex = 17;
             this.butLuu6.Text = "Lưu";
+            this.butLuu6.Click += new System.EventHandler(this.butLuu6_Click);
             // 
             // textGhiChu6
             // 
@@ -492,6 +493,7 @@
             this.butXoa6.Size = new System.Drawing.Size(89, 29);
             this.butXoa6.TabIndex = 16;
             this.butXoa6.Text = "Xóa";
+            this.butXoa6.Click += new System.EventHandler(this.butXoa6_Click);
             // 
             // label19
             // 
@@ -509,6 +511,7 @@
             this.butSua6.Size = new System.Drawing.Size(89, 29);
             this.butSua6.TabIndex = 15;
             this.butSua6.Text = "Sửa";
+            this.butSua6.Click += new System.EventHandler(this.butSua6_Click);
             // 
             // textMaKTKL6
             // 
@@ -525,6 +528,7 @@
             this.butThem6.Size = new System.Drawing.Size(89, 29);
             this.butThem6.TabIndex = 14;
             this.butThem6.Text = "Thêm";
+            this.butThem6.Click += new System.EventHandler(this.butThem6_Click);
             // 
             // textMaNV6
             // 
@@ -541,6 +545,7 @@
             this.butXuat.Size = new System.Drawing.Size(94, 29);
             this.butXuat.TabIndex = 19;
             this.butXuat.Text = "Xuất EXCEL";
+            this.butXuat.Click += new System.EventHandler(this.butXuat_Click);
             // 
             // dataGridView6
             // 
@@ -557,6 +562,7 @@
             this.dataGridView6.RowTemplate.Height = 24;
             this.dataGridView6.Size = new System.Drawing.Size(846, 301);
             this.dataGridView6.TabIndex = 11;
+            this.dataGridView6.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView6_CellMouseClick);
             // 
             // Column16
             // 
@@ -714,6 +720,7 @@
             this.dataGridView5.RowTemplate.Height = 24;
             this.dataGridView5.Size = new System.Drawing.Size(647, 277);
             this.dataGridView5.TabIndex = 9;
+            this.dataGridView5.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView5_CellMouseClick);
             // 
             // Column13
             // 
@@ -1203,6 +1210,7 @@
             this.butThem.Size = new System.Drawing.Size(94, 29);
             this.butThem.TabIndex = 7;
             this.butThem.Text = "Thêm";
+            this.butThem.Click += new System.EventHandler(this.butThem_Click);
             // 
             // textTenCV
             // 
@@ -1259,6 +1267,7 @@
             this.butLuu.Size = new System.Drawing.Size(94, 29);
             this.butLuu.TabIndex = 10;
             this.butLuu.Text = "Lưu";
+            this.butLuu.Click += new System.EventHandler(this.butLuu_Click);
             // 
             // butSua
             // 
@@ -1267,6 +1276,7 @@
             this.butSua.Size = new System.Drawing.Size(94, 29);
             this.butSua.TabIndex = 8;
             this.butSua.Text = "Sửa";
+            this.butSua.Click += new System.EventHandler(this.butSua_Click);
             // 
             // butXoa
             // 
@@ -1275,6 +1285,7 @@
             this.butXoa.Size = new System.Drawing.Size(94, 29);
             this.butXoa.TabIndex = 9;
             this.butXoa.Text = "Xóa";
+            this.butXoa.Click += new System.EventHandler(this.butXoa_Click);
             // 
             // dataGridView1
             // 
