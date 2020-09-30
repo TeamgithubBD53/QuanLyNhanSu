@@ -14,7 +14,7 @@ namespace QuanLyNhanVien
     public partial class DanhMuc : DevExpress.XtraEditors.XtraForm
     {
         public static int kt3 = 0; // kiểm tra thêm, sửa, xóa bao hiem
-
+        public static int kt5 = 0; // kiểm tra thêm, sửa, xóa bao hiem
         public DanhMuc()
         {
             InitializeComponent();
@@ -28,11 +28,18 @@ namespace QuanLyNhanVien
             dataGridView7.ReadOnly = true;
             textSoTien7.ReadOnly = true;
             getData7();
+            dataGridView5.ReadOnly = true;
+            getData5();
         }
         public void getData3()
         {
             KetNoi kn = new KetNoi();
             dataGridView3.DataSource = kn.LoadData("DanhSachBH");
+        }
+        public void getData5()
+        {
+            KetNoi kn = new KetNoi();
+            dataGridView5.DataSource = kn.LoadData("QuyetDinhKTKL");
         }
         //private void dataGridView3_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         //{
@@ -290,5 +297,78 @@ namespace QuanLyNhanVien
                 XtraMessageBox.Show(ex.Message);
             }
         }
+        private void dataGridView5_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            try
+            {
+                DataGridViewRow row = new DataGridViewRow();
+                row = dataGridView5.Rows[e.RowIndex];
+                textMaKTKL5.Text = row.Cells[0].Value.ToString();
+                textTenQD5.Text = row.Cells[1].Value.ToString();
+                textSoTien5.Text = row.Cells[2].Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message);
+            }
+        }
+        private void butThem_Click(object sender, EventArgs e)
+        {
+            kt5 = 1;
+        }
+
+        private void butSua_Click(object sender, EventArgs e)
+        {
+            kt5 = 2;
+        }
+
+        private void butXoa_Click(object sender, EventArgs e)
+        {
+            kt3 = 3;
+        }
+
+        private void butLuu_Click(object sender, EventArgs e)
+        {
+            KetNoi kn = new KetNoi();
+            if (kt5 == 1)
+            {
+                if (kn.LoadDataDK("QuyDinhKTKLDK", "@MaKTKL", textMaKTKL5.Text).Rows.Count == 1)
+                    XtraMessageBox.Show("Mã khen thưởng, kỉ luật này đã có trong danh sách");
+                else
+                {
+                    kn.QuyDinhKTKL("ThemKTKL", textMaKTKL5.Text, textMaKTKL5.Text, textSoTien5.Text);
+                }
+            }
+            else if (kt5 == 2)
+            {
+                if (kn.LoadDataDK("QuyDinhKTKLDK", "@MaKTKL", textMaKTKL5.Text).Rows.Count == 0)
+                    XtraMessageBox.Show("Mã khen thưởng, kỉ luật này chưa có trong danh sách");
+                else
+                {
+                    kn.QuyDinhKTKL("SuaKTKL", textMaKTKL5.Text, textTenQD5.Text, textSoTien5.Text);
+                }
+            }
+            else if (kt5 == 3)
+            {
+                try
+                {
+                    if (kn.LoadDataDK("QuyDinhKTKLDK", "@MaKTKL", textMaKTKL5.Text).Rows.Count == 0)
+                        XtraMessageBox.Show("Không tìm thấy mã quyết định KTKL để xóa ");
+                    else
+                    {
+                        kn.Xoa("XoaKTKL", "@MaKTKL", textMaKTKL5.Text);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    XtraMessageBox.Show(ex.Message);
+                }
+
+            }
+            getData5();
+            kt5 = 0;
+        }
+
+       
     }
 }
