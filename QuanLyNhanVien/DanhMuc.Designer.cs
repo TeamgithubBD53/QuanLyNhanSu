@@ -252,6 +252,7 @@
             this.butLuu7.Size = new System.Drawing.Size(94, 29);
             this.butLuu7.TabIndex = 17;
             this.butLuu7.Text = "Lưu";
+            this.butLuu7.Click += new System.EventHandler(this.butLuu7_Click);
             // 
             // textSoTien7
             // 
@@ -267,6 +268,7 @@
             this.butXoa7.Size = new System.Drawing.Size(94, 29);
             this.butXoa7.TabIndex = 16;
             this.butXoa7.Text = "Xóa";
+            this.butXoa7.Click += new System.EventHandler(this.butXoa7_Click);
             // 
             // textMaNV7
             // 
@@ -283,6 +285,7 @@
             this.butSua7.Size = new System.Drawing.Size(94, 29);
             this.butSua7.TabIndex = 15;
             this.butSua7.Text = "Sửa";
+            this.butSua7.Click += new System.EventHandler(this.butSua7_Click);
             // 
             // textMaBH7
             // 
@@ -299,6 +302,7 @@
             this.butThem7.Size = new System.Drawing.Size(94, 29);
             this.butThem7.TabIndex = 14;
             this.butThem7.Text = "Thêm";
+            this.butThem7.Click += new System.EventHandler(this.butThem7_Click);
             // 
             // label20
             // 
@@ -352,6 +356,7 @@
             this.dataGridView7.RowTemplate.Height = 24;
             this.dataGridView7.Size = new System.Drawing.Size(799, 255);
             this.dataGridView7.TabIndex = 13;
+            this.dataGridView7.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView7_CellMouseClick);
             // 
             // Column20
             // 
