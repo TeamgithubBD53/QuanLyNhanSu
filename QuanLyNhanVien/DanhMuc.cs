@@ -19,6 +19,8 @@ namespace QuanLyNhanVien
         public DanhMuc()
         {
             InitializeComponent();
+            dataGridViewChucVu.ReadOnly = true;
+            getDataChucVu();
 
             dataGridView3.ReadOnly = true;
             getData3();
@@ -30,6 +32,13 @@ namespace QuanLyNhanVien
             textSoTien7.ReadOnly = true;
             getData7();
         }
+
+        public void getDataChucVu()
+        {
+            KetNoi kn = new KetNoi();
+            dataGridViewChucVu.DataSource = kn.LoadData("DSChucVu");
+        }
+
         public void getData3()
         {
             KetNoi kn = new KetNoi();
