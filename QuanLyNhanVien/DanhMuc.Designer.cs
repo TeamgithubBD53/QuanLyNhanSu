@@ -133,16 +133,16 @@
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabChucVu = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.butThemChucVu = new DevExpress.XtraEditors.SimpleButton();
+            this.btnThemChucVu = new DevExpress.XtraEditors.SimpleButton();
             this.textTenCVChucVu = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textPhuCapChucVu = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textMaCVChucVu = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.butLuuChucVu = new DevExpress.XtraEditors.SimpleButton();
-            this.butSuaChucVu = new DevExpress.XtraEditors.SimpleButton();
-            this.butXoaChucVu = new DevExpress.XtraEditors.SimpleButton();
+            this.btnLuuChucVu = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSuaChucVu = new DevExpress.XtraEditors.SimpleButton();
+            this.btnXoaChucVu = new DevExpress.XtraEditors.SimpleButton();
             this.dataGridViewChucVu = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -1181,28 +1181,29 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Lavender;
-            this.panel1.Controls.Add(this.butThemChucVu);
+            this.panel1.Controls.Add(this.btnThemChucVu);
             this.panel1.Controls.Add(this.textTenCVChucVu);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.textPhuCapChucVu);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.textMaCVChucVu);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.butLuuChucVu);
-            this.panel1.Controls.Add(this.butSuaChucVu);
-            this.panel1.Controls.Add(this.butXoaChucVu);
+            this.panel1.Controls.Add(this.btnLuuChucVu);
+            this.panel1.Controls.Add(this.btnSuaChucVu);
+            this.panel1.Controls.Add(this.btnXoaChucVu);
             this.panel1.Location = new System.Drawing.Point(182, 42);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(606, 262);
             this.panel1.TabIndex = 11;
             // 
-            // butThemChucVu
+            // btnThemChucVu
             // 
-            this.butThemChucVu.Location = new System.Drawing.Point(97, 3);
-            this.butThemChucVu.Name = "butThemChucVu";
-            this.butThemChucVu.Size = new System.Drawing.Size(94, 29);
-            this.butThemChucVu.TabIndex = 7;
-            this.butThemChucVu.Text = "Thêm";
+            this.btnThemChucVu.Location = new System.Drawing.Point(97, 3);
+            this.btnThemChucVu.Name = "btnThemChucVu";
+            this.btnThemChucVu.Size = new System.Drawing.Size(94, 29);
+            this.btnThemChucVu.TabIndex = 7;
+            this.btnThemChucVu.Text = "Thêm";
+            this.btnThemChucVu.Click += new System.EventHandler(this.btnThemChucVu_Click);
             // 
             // textTenCVChucVu
             // 
@@ -1252,29 +1253,31 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Phụ cấp:";
             // 
-            // butLuuChucVu
+            // btnLuuChucVu
             // 
-            this.butLuuChucVu.Location = new System.Drawing.Point(232, 229);
-            this.butLuuChucVu.Name = "butLuuChucVu";
-            this.butLuuChucVu.Size = new System.Drawing.Size(94, 29);
-            this.butLuuChucVu.TabIndex = 10;
-            this.butLuuChucVu.Text = "Lưu";
+            this.btnLuuChucVu.Location = new System.Drawing.Point(232, 229);
+            this.btnLuuChucVu.Name = "btnLuuChucVu";
+            this.btnLuuChucVu.Size = new System.Drawing.Size(94, 29);
+            this.btnLuuChucVu.TabIndex = 10;
+            this.btnLuuChucVu.Text = "Lưu";
             // 
-            // butSuaChucVu
+            // btnSuaChucVu
             // 
-            this.butSuaChucVu.Location = new System.Drawing.Point(232, 3);
-            this.butSuaChucVu.Name = "butSuaChucVu";
-            this.butSuaChucVu.Size = new System.Drawing.Size(94, 29);
-            this.butSuaChucVu.TabIndex = 8;
-            this.butSuaChucVu.Text = "Sửa";
+            this.btnSuaChucVu.Location = new System.Drawing.Point(232, 3);
+            this.btnSuaChucVu.Name = "btnSuaChucVu";
+            this.btnSuaChucVu.Size = new System.Drawing.Size(94, 29);
+            this.btnSuaChucVu.TabIndex = 8;
+            this.btnSuaChucVu.Text = "Sửa";
+            this.btnSuaChucVu.Click += new System.EventHandler(this.btnSuaChucVu_Click);
             // 
-            // butXoaChucVu
+            // btnXoaChucVu
             // 
-            this.butXoaChucVu.Location = new System.Drawing.Point(365, 3);
-            this.butXoaChucVu.Name = "butXoaChucVu";
-            this.butXoaChucVu.Size = new System.Drawing.Size(94, 29);
-            this.butXoaChucVu.TabIndex = 9;
-            this.butXoaChucVu.Text = "Xóa";
+            this.btnXoaChucVu.Location = new System.Drawing.Point(365, 3);
+            this.btnXoaChucVu.Name = "btnXoaChucVu";
+            this.btnXoaChucVu.Size = new System.Drawing.Size(94, 29);
+            this.btnXoaChucVu.TabIndex = 9;
+            this.btnXoaChucVu.Text = "Xóa";
+            this.btnXoaChucVu.Click += new System.EventHandler(this.btnXoaChucVu_Click);
             // 
             // dataGridViewChucVu
             // 
@@ -1452,10 +1455,10 @@
         private System.Windows.Forms.TextBox textTenCVChucVu;
         private System.Windows.Forms.TextBox textPhuCapChucVu;
         private System.Windows.Forms.TextBox textMaCVChucVu;
-        private DevExpress.XtraEditors.SimpleButton butLuuChucVu;
-        private DevExpress.XtraEditors.SimpleButton butXoaChucVu;
-        private DevExpress.XtraEditors.SimpleButton butSuaChucVu;
-        private DevExpress.XtraEditors.SimpleButton butThemChucVu;
+        private DevExpress.XtraEditors.SimpleButton btnLuuChucVu;
+        private DevExpress.XtraEditors.SimpleButton btnXoaChucVu;
+        private DevExpress.XtraEditors.SimpleButton btnSuaChucVu;
+        private DevExpress.XtraEditors.SimpleButton btnThemChucVu;
         private System.Windows.Forms.DataGridView dataGridViewChucVu;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
