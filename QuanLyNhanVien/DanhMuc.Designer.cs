@@ -133,17 +133,17 @@
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabChucVu = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.butThem = new DevExpress.XtraEditors.SimpleButton();
-            this.textTenCV = new System.Windows.Forms.TextBox();
+            this.butThemChucVu = new DevExpress.XtraEditors.SimpleButton();
+            this.textTenCVChucVu = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textPhuCap = new System.Windows.Forms.TextBox();
+            this.textPhuCapChucVu = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textMaCV = new System.Windows.Forms.TextBox();
+            this.textMaCVChucVu = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.butLuu = new DevExpress.XtraEditors.SimpleButton();
-            this.butSua = new DevExpress.XtraEditors.SimpleButton();
-            this.butXoa = new DevExpress.XtraEditors.SimpleButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.butLuuChucVu = new DevExpress.XtraEditors.SimpleButton();
+            this.butSuaChucVu = new DevExpress.XtraEditors.SimpleButton();
+            this.butXoaChucVu = new DevExpress.XtraEditors.SimpleButton();
+            this.dataGridViewChucVu = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -174,7 +174,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabChucVu.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChucVu)).BeginInit();
             this.tabDanhMuc.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -1169,7 +1169,7 @@
             // tabChucVu
             // 
             this.tabChucVu.Controls.Add(this.panel1);
-            this.tabChucVu.Controls.Add(this.dataGridView1);
+            this.tabChucVu.Controls.Add(this.dataGridViewChucVu);
             this.tabChucVu.Location = new System.Drawing.Point(4, 25);
             this.tabChucVu.Name = "tabChucVu";
             this.tabChucVu.Padding = new System.Windows.Forms.Padding(3);
@@ -1181,35 +1181,35 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Lavender;
-            this.panel1.Controls.Add(this.butThem);
-            this.panel1.Controls.Add(this.textTenCV);
+            this.panel1.Controls.Add(this.butThemChucVu);
+            this.panel1.Controls.Add(this.textTenCVChucVu);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.textPhuCap);
+            this.panel1.Controls.Add(this.textPhuCapChucVu);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.textMaCV);
+            this.panel1.Controls.Add(this.textMaCVChucVu);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.butLuu);
-            this.panel1.Controls.Add(this.butSua);
-            this.panel1.Controls.Add(this.butXoa);
+            this.panel1.Controls.Add(this.butLuuChucVu);
+            this.panel1.Controls.Add(this.butSuaChucVu);
+            this.panel1.Controls.Add(this.butXoaChucVu);
             this.panel1.Location = new System.Drawing.Point(182, 42);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(606, 262);
             this.panel1.TabIndex = 11;
             // 
-            // butThem
+            // butThemChucVu
             // 
-            this.butThem.Location = new System.Drawing.Point(97, 3);
-            this.butThem.Name = "butThem";
-            this.butThem.Size = new System.Drawing.Size(94, 29);
-            this.butThem.TabIndex = 7;
-            this.butThem.Text = "Thêm";
+            this.butThemChucVu.Location = new System.Drawing.Point(97, 3);
+            this.butThemChucVu.Name = "butThemChucVu";
+            this.butThemChucVu.Size = new System.Drawing.Size(94, 29);
+            this.butThemChucVu.TabIndex = 7;
+            this.butThemChucVu.Text = "Thêm";
             // 
-            // textTenCV
+            // textTenCVChucVu
             // 
-            this.textTenCV.Location = new System.Drawing.Point(230, 116);
-            this.textTenCV.Name = "textTenCV";
-            this.textTenCV.Size = new System.Drawing.Size(229, 23);
-            this.textTenCV.TabIndex = 2;
+            this.textTenCVChucVu.Location = new System.Drawing.Point(230, 116);
+            this.textTenCVChucVu.Name = "textTenCVChucVu";
+            this.textTenCVChucVu.Size = new System.Drawing.Size(229, 23);
+            this.textTenCVChucVu.TabIndex = 2;
             // 
             // label1
             // 
@@ -1220,12 +1220,12 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Mã chức vụ:";
             // 
-            // textPhuCap
+            // textPhuCapChucVu
             // 
-            this.textPhuCap.Location = new System.Drawing.Point(230, 169);
-            this.textPhuCap.Name = "textPhuCap";
-            this.textPhuCap.Size = new System.Drawing.Size(229, 23);
-            this.textPhuCap.TabIndex = 1;
+            this.textPhuCapChucVu.Location = new System.Drawing.Point(230, 169);
+            this.textPhuCapChucVu.Name = "textPhuCapChucVu";
+            this.textPhuCapChucVu.Size = new System.Drawing.Size(229, 23);
+            this.textPhuCapChucVu.TabIndex = 1;
             // 
             // label2
             // 
@@ -1236,12 +1236,12 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Tên chức vụ:";
             // 
-            // textMaCV
+            // textMaCVChucVu
             // 
-            this.textMaCV.Location = new System.Drawing.Point(230, 57);
-            this.textMaCV.Name = "textMaCV";
-            this.textMaCV.Size = new System.Drawing.Size(229, 23);
-            this.textMaCV.TabIndex = 0;
+            this.textMaCVChucVu.Location = new System.Drawing.Point(230, 57);
+            this.textMaCVChucVu.Name = "textMaCVChucVu";
+            this.textMaCVChucVu.Size = new System.Drawing.Size(229, 23);
+            this.textMaCVChucVu.TabIndex = 0;
             // 
             // label3
             // 
@@ -1252,44 +1252,44 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Phụ cấp:";
             // 
-            // butLuu
+            // butLuuChucVu
             // 
-            this.butLuu.Location = new System.Drawing.Point(232, 229);
-            this.butLuu.Name = "butLuu";
-            this.butLuu.Size = new System.Drawing.Size(94, 29);
-            this.butLuu.TabIndex = 10;
-            this.butLuu.Text = "Lưu";
+            this.butLuuChucVu.Location = new System.Drawing.Point(232, 229);
+            this.butLuuChucVu.Name = "butLuuChucVu";
+            this.butLuuChucVu.Size = new System.Drawing.Size(94, 29);
+            this.butLuuChucVu.TabIndex = 10;
+            this.butLuuChucVu.Text = "Lưu";
             // 
-            // butSua
+            // butSuaChucVu
             // 
-            this.butSua.Location = new System.Drawing.Point(232, 3);
-            this.butSua.Name = "butSua";
-            this.butSua.Size = new System.Drawing.Size(94, 29);
-            this.butSua.TabIndex = 8;
-            this.butSua.Text = "Sửa";
+            this.butSuaChucVu.Location = new System.Drawing.Point(232, 3);
+            this.butSuaChucVu.Name = "butSuaChucVu";
+            this.butSuaChucVu.Size = new System.Drawing.Size(94, 29);
+            this.butSuaChucVu.TabIndex = 8;
+            this.butSuaChucVu.Text = "Sửa";
             // 
-            // butXoa
+            // butXoaChucVu
             // 
-            this.butXoa.Location = new System.Drawing.Point(365, 3);
-            this.butXoa.Name = "butXoa";
-            this.butXoa.Size = new System.Drawing.Size(94, 29);
-            this.butXoa.TabIndex = 9;
-            this.butXoa.Text = "Xóa";
+            this.butXoaChucVu.Location = new System.Drawing.Point(365, 3);
+            this.butXoaChucVu.Name = "butXoaChucVu";
+            this.butXoaChucVu.Size = new System.Drawing.Size(94, 29);
+            this.butXoaChucVu.TabIndex = 9;
+            this.butXoaChucVu.Text = "Xóa";
             // 
-            // dataGridView1
+            // dataGridViewChucVu
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewChucVu.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridViewChucVu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewChucVu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dataGridView1.Location = new System.Drawing.Point(152, 344);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(651, 347);
-            this.dataGridView1.TabIndex = 6;
+            this.dataGridViewChucVu.Location = new System.Drawing.Point(152, 344);
+            this.dataGridViewChucVu.Name = "dataGridViewChucVu";
+            this.dataGridViewChucVu.RowHeadersWidth = 51;
+            this.dataGridViewChucVu.RowTemplate.Height = 24;
+            this.dataGridViewChucVu.Size = new System.Drawing.Size(651, 347);
+            this.dataGridViewChucVu.TabIndex = 6;
             // 
             // Column1
             // 
@@ -1372,7 +1372,7 @@
             this.tabChucVu.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChucVu)).EndInit();
             this.tabDanhMuc.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -1449,14 +1449,14 @@
         private DevExpress.XtraEditors.SimpleButton butSua2;
         private DevExpress.XtraEditors.SimpleButton butThem2;
         private System.Windows.Forms.TabPage tabChucVu;
-        private System.Windows.Forms.TextBox textTenCV;
-        private System.Windows.Forms.TextBox textPhuCap;
-        private System.Windows.Forms.TextBox textMaCV;
-        private DevExpress.XtraEditors.SimpleButton butLuu;
-        private DevExpress.XtraEditors.SimpleButton butXoa;
-        private DevExpress.XtraEditors.SimpleButton butSua;
-        private DevExpress.XtraEditors.SimpleButton butThem;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox textTenCVChucVu;
+        private System.Windows.Forms.TextBox textPhuCapChucVu;
+        private System.Windows.Forms.TextBox textMaCVChucVu;
+        private DevExpress.XtraEditors.SimpleButton butLuuChucVu;
+        private DevExpress.XtraEditors.SimpleButton butXoaChucVu;
+        private DevExpress.XtraEditors.SimpleButton butSuaChucVu;
+        private DevExpress.XtraEditors.SimpleButton butThemChucVu;
+        private System.Windows.Forms.DataGridView dataGridViewChucVu;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
