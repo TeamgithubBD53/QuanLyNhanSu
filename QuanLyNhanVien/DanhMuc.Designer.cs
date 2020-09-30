@@ -545,6 +545,7 @@
             this.butXuat.Size = new System.Drawing.Size(94, 29);
             this.butXuat.TabIndex = 19;
             this.butXuat.Text = "Xuất EXCEL";
+            this.butXuat.Click += new System.EventHandler(this.butXuat_Click);
             // 
             // dataGridView6
             // 

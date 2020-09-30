@@ -454,6 +454,19 @@ namespace QuanLyNhanVien
             kt6 = 0;
         }
 
-        
+        private void butXuat_Click(object sender, EventArgs e)
+        {
+            KetNoi kn = new KetNoi();
+            DataTable dt = kn.LoadData("XuatDanhSachKTKL");
+
+            if (dt.Rows.Count == 0)
+                XtraMessageBox.Show("Không có dữ liệu để xuất");
+            else
+            {
+
+                kn.LoadDataSet("XuatDanhSachKTKL").WriteXml(@"D:\'Danh sách khen thưởng, kỉ luật'.xls");
+                XtraMessageBox.Show("Xuất thành công");
+            }
+        }
     }
 }
