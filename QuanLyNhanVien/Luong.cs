@@ -8,13 +8,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-
+//Author: khanhnguyenk8
 namespace QuanLyNhanVien
 {
     public partial class Luong : DevExpress.XtraEditors.XtraForm
     {
         public static int kt1 = 0; // kiểm tra thêm, sửa, xóa
-
         public Luong()
         {
             InitializeComponent();
