@@ -21,6 +21,9 @@ namespace QuanLyNhanVien
 
             dataGridView3.ReadOnly = true;
             getData3();
+
+            dataGridView4.ReadOnly = true;
+            getData4();
         }
         public void getData3()
         {
@@ -114,6 +117,88 @@ namespace QuanLyNhanVien
             {
                 XtraMessageBox.Show(ex.Message);
             }
+        }
+
+        //tuyển dụng
+
+        public static int kt4 = 0; // kiểm tra thêm, sửa, xóa tuyển dụng
+
+        public void getData4()
+        {
+            KetNoi kn = new KetNoi();
+            dataGridView4.DataSource = kn.LoadData("TuyenDung");
+        }
+
+        private void dataGridView4_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            try
+            {
+                DataGridViewRow row = new DataGridViewRow();
+                row = dataGridView4.Rows[e.RowIndex];
+                textMaTD4.Text = row.Cells[0].Value.ToString();
+                textTenTD4.Text = row.Cells[1].Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message);
+            }
+        }
+
+        private void butThem4_Click(object sender, EventArgs e)
+        {
+            kt4 = 1;
+        }
+
+        private void butSua4_Click(object sender, EventArgs e)
+        {
+            kt4 = 2;
+        }
+
+        private void butXoa4_Click(object sender, EventArgs e)
+        {
+            kt4 = 3;
+        }
+
+        private void butLuu4_Click(object sender, EventArgs e)
+        {
+            KetNoi kn = new KetNoi();
+            if (kt4 == 1)
+            {
+                if (kn.LoadDataDK("TuyenDungDK", "@MaTD", textMaTD4.Text).Rows.Count == 1)
+                    XtraMessageBox.Show("Mã tuyển dụng đã có trong danh sách");
+                else
+                {
+                    kn.TuyenDung("ThemTD", textMaTD4.Text, textTenTD4.Text);
+                }
+            }
+            else if (kt4 == 2)
+            {
+                if (kn.LoadDataDK("TuyenDungDK", "@MaTD", textMaTD4.Text).Rows.Count == 0)
+                    XtraMessageBox.Show("Mã tuyển dụng chưa có trong danh sách");
+                else
+                {
+                    kn.TuyenDung("SuaTD", textMaTD4.Text, textTenTD4.Text);
+                }
+            }
+            else if (kt4 == 3)
+            {
+                try
+                {
+                    if (kn.LoadDataDK("TuyenDungDK", "@MaTD", textMaTD4.Text).Rows.Count == 0)
+                        XtraMessageBox.Show("Không tìm thấy mã tuyển dụng để xóa ");
+                    else
+                    {
+                        kn.Xoa("XoaTD", "@MaTD", textMaTD4.Text);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    XtraMessageBox.Show(ex.Message);
+                }
+
+            }
+            getData4();
+            kt4 = 0;
         }
     }
 }
