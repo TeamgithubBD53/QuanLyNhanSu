@@ -300,5 +300,20 @@ namespace QuanLyNhanVien
                 XtraMessageBox.Show(ex.Message);
             }
         }
+
+        private void btnThemChucVu_Click(object sender, EventArgs e)
+        {
+            kt1 = 1;
+        }
+
+        private void btnSuaChucVu_Click(object sender, EventArgs e)
+        {
+            kt1 = 2;
+        }
+
+        private void btnXoaChucVu_Click(object sender, EventArgs e)
+        {
+            kt1 = 3;
+        }
     }
 }
