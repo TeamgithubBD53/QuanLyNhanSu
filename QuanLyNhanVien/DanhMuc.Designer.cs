@@ -633,6 +633,7 @@
             this.butThem5.Size = new System.Drawing.Size(94, 29);
             this.butThem5.TabIndex = 10;
             this.butThem5.Text = "Thêm ";
+            this.butThem5.Click += new System.EventHandler(this.butThem5_Click);
             // 
             // butLuu5
             // 
@@ -641,6 +642,7 @@
             this.butLuu5.Size = new System.Drawing.Size(94, 29);
             this.butLuu5.TabIndex = 13;
             this.butLuu5.Text = "Lưu";
+            this.butLuu5.Click += new System.EventHandler(this.butLuu5_Click);
             // 
             // label13
             // 
@@ -658,6 +660,7 @@
             this.butXoa5.Size = new System.Drawing.Size(94, 29);
             this.butXoa5.TabIndex = 12;
             this.butXoa5.Text = "Xóa";
+            this.butXoa5.Click += new System.EventHandler(this.butXoa5_Click);
             // 
             // label14
             // 
@@ -675,6 +678,7 @@
             this.butSua5.Size = new System.Drawing.Size(94, 29);
             this.butSua5.TabIndex = 11;
             this.butSua5.Text = "Sửa";
+            this.butSua5.Click += new System.EventHandler(this.butSua5_Click);
             // 
             // label15
             // 
@@ -1210,7 +1214,6 @@
             this.butThem.Size = new System.Drawing.Size(94, 29);
             this.butThem.TabIndex = 7;
             this.butThem.Text = "Thêm";
-            this.butThem.Click += new System.EventHandler(this.butThem_Click);
             // 
             // textTenCV
             // 
@@ -1267,7 +1270,6 @@
             this.butLuu.Size = new System.Drawing.Size(94, 29);
             this.butLuu.TabIndex = 10;
             this.butLuu.Text = "Lưu";
-            this.butLuu.Click += new System.EventHandler(this.butLuu_Click);
             // 
             // butSua
             // 
@@ -1276,7 +1278,6 @@
             this.butSua.Size = new System.Drawing.Size(94, 29);
             this.butSua.TabIndex = 8;
             this.butSua.Text = "Sửa";
-            this.butSua.Click += new System.EventHandler(this.butSua_Click);
             // 
             // butXoa
             // 
@@ -1285,7 +1286,6 @@
             this.butXoa.Size = new System.Drawing.Size(94, 29);
             this.butXoa.TabIndex = 9;
             this.butXoa.Text = "Xóa";
-            this.butXoa.Click += new System.EventHandler(this.butXoa_Click);
             // 
             // dataGridView1
             // 

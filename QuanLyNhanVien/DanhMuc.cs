@@ -304,37 +304,22 @@ namespace QuanLyNhanVien
                 XtraMessageBox.Show(ex.Message);
             }
         }
-        private void dataGridView5_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            try
-            {
-                DataGridViewRow row = new DataGridViewRow();
-                row = dataGridView5.Rows[e.RowIndex];
-                textMaKTKL5.Text = row.Cells[0].Value.ToString();
-                textTenQD5.Text = row.Cells[1].Value.ToString();
-                textSoTien5.Text = row.Cells[2].Value.ToString();
-            }
-            catch (Exception ex)
-            {
-                XtraMessageBox.Show(ex.Message);
-            }
-        }
-        private void butThem_Click(object sender, EventArgs e)
+        private void butThem5_Click(object sender, EventArgs e)
         {
             kt5 = 1;
         }
 
-        private void butSua_Click(object sender, EventArgs e)
+        private void butSua5_Click(object sender, EventArgs e)
         {
             kt5 = 2;
         }
 
-        private void butXoa_Click(object sender, EventArgs e)
+        private void butXoa5_Click(object sender, EventArgs e)
         {
-            kt3 = 3;
+            kt5 = 3;
         }
 
-        private void butLuu_Click(object sender, EventArgs e)
+        private void butLuu5_Click(object sender, EventArgs e)
         {
             KetNoi kn = new KetNoi();
             if (kt5 == 1)
@@ -375,6 +360,22 @@ namespace QuanLyNhanVien
             getData5();
             kt5 = 0;
         }
+        private void dataGridView5_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            try
+            {
+                DataGridViewRow row = new DataGridViewRow();
+                row = dataGridView5.Rows[e.RowIndex];
+                textMaKTKL5.Text = row.Cells[0].Value.ToString();
+                textTenQD5.Text = row.Cells[1].Value.ToString();
+                textSoTien5.Text = row.Cells[2].Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message);
+            }
+        }
+      
         public void getData6()
         {
             KetNoi kn = new KetNoi();
@@ -468,5 +469,7 @@ namespace QuanLyNhanVien
                 XtraMessageBox.Show("Xuất thành công");
             }
         }
+
+        
     }
 }
