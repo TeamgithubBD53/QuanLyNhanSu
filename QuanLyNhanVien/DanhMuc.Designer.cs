@@ -112,9 +112,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPhongBan = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.butThem2 = new DevExpress.XtraEditors.SimpleButton();
@@ -148,6 +145,9 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabDanhMuc = new System.Windows.Forms.TabControl();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textNgayKT7.Properties.CalendarTimeProperties)).BeginInit();
@@ -1004,30 +1004,6 @@
             this.dataGridView3.TabIndex = 9;
             this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
             // 
-            // Column8
-            // 
-            this.Column8.DataPropertyName = "MaBaoHiem";
-            this.Column8.HeaderText = "Mã bảo hiểm";
-            this.Column8.MinimumWidth = 6;
-            this.Column8.Name = "Column8";
-            this.Column8.Width = 200;
-            // 
-            // Column9
-            // 
-            this.Column9.DataPropertyName = "Ten";
-            this.Column9.HeaderText = "Tên bảo hiểm";
-            this.Column9.MinimumWidth = 6;
-            this.Column9.Name = "Column9";
-            this.Column9.Width = 200;
-            // 
-            // Column10
-            // 
-            this.Column10.DataPropertyName = "TiLeBH";
-            this.Column10.HeaderText = "Tỉ lệ bảo hiểm";
-            this.Column10.MinimumWidth = 6;
-            this.Column10.Name = "Column10";
-            this.Column10.Width = 200;
-            // 
             // tabPhongBan
             // 
             this.tabPhongBan.Controls.Add(this.panel2);
@@ -1341,6 +1317,30 @@
             this.tabDanhMuc.Size = new System.Drawing.Size(1059, 748);
             this.tabDanhMuc.TabIndex = 0;
             // 
+            // Column8
+            // 
+            this.Column8.DataPropertyName = "MaBaoHiem";
+            this.Column8.HeaderText = "Mã bảo hiểm";
+            this.Column8.MinimumWidth = 6;
+            this.Column8.Name = "Column8";
+            this.Column8.Width = 200;
+            // 
+            // Column9
+            // 
+            this.Column9.DataPropertyName = "Ten";
+            this.Column9.HeaderText = "Tên bảo hiểm";
+            this.Column9.MinimumWidth = 6;
+            this.Column9.Name = "Column9";
+            this.Column9.Width = 200;
+            // 
+            // Column10
+            // 
+            this.Column10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column10.DataPropertyName = "TiLeBH";
+            this.Column10.HeaderText = "Tỉ lệ bảo hiểm";
+            this.Column10.MinimumWidth = 6;
+            this.Column10.Name = "Column10";
+            // 
             // DanhMuc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -1492,9 +1492,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -1511,5 +1508,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column22;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column23;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column24;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
     }
 }
