@@ -15,7 +15,8 @@ namespace QuanLyNhanVien
     {
         public static int kt1 = 0; //kiểm tra thêm, sửa, xóa chức vụ
         public static int kt3 = 0; // kiểm tra thêm, sửa, xóa bao hiem
-
+        public static int kt5 = 0; // kiểm tra thêm, sửa, xóa bao hiem
+        public static int kt6 = 0; // kiểm tra thêm, sửa, xóa bao hiem
         public DanhMuc()
         {
             InitializeComponent();
@@ -28,9 +29,17 @@ namespace QuanLyNhanVien
             dataGridView4.ReadOnly = true;
             getData4();
 
+            dataGridView5.ReadOnly = true;
+            getData5();
+
+            dataGridView6.ReadOnly = true;
+            getData6();
+
             dataGridView7.ReadOnly = true;
             textSoTien7.ReadOnly = true;
             getData7();
+
+            
         }
 
         public void getDataChucVu()
@@ -43,6 +52,11 @@ namespace QuanLyNhanVien
         {
             KetNoi kn = new KetNoi();
             dataGridView3.DataSource = kn.LoadData("DanhSachBH");
+        }
+        public void getData5()
+        {
+            KetNoi kn = new KetNoi();
+            dataGridView5.DataSource = kn.LoadData("QuyetDinhKTKL");
         }
         //private void dataGridView3_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         //{
@@ -300,6 +314,7 @@ namespace QuanLyNhanVien
                 XtraMessageBox.Show(ex.Message);
             }
         }
+<<<<<<< HEAD
 
         private void btnThemChucVu_Click(object sender, EventArgs e)
         {
@@ -314,6 +329,171 @@ namespace QuanLyNhanVien
         private void btnXoaChucVu_Click(object sender, EventArgs e)
         {
             kt1 = 3;
+=======
+        private void dataGridView5_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            try
+            {
+                DataGridViewRow row = new DataGridViewRow();
+                row = dataGridView5.Rows[e.RowIndex];
+                textMaKTKL5.Text = row.Cells[0].Value.ToString();
+                textTenQD5.Text = row.Cells[1].Value.ToString();
+                textSoTien5.Text = row.Cells[2].Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message);
+            }
+        }
+        private void butThem_Click(object sender, EventArgs e)
+        {
+            kt5 = 1;
+        }
+
+        private void butSua_Click(object sender, EventArgs e)
+        {
+            kt5 = 2;
+        }
+
+        private void butXoa_Click(object sender, EventArgs e)
+        {
+            kt3 = 3;
+        }
+
+        private void butLuu_Click(object sender, EventArgs e)
+        {
+            KetNoi kn = new KetNoi();
+            if (kt5 == 1)
+            {
+                if (kn.LoadDataDK("QuyDinhKTKLDK", "@MaKTKL", textMaKTKL5.Text).Rows.Count == 1)
+                    XtraMessageBox.Show("Mã khen thưởng, kỉ luật này đã có trong danh sách");
+                else
+                {
+                    kn.QuyDinhKTKL("ThemKTKL", textMaKTKL5.Text, textMaKTKL5.Text, textSoTien5.Text);
+                }
+            }
+            else if (kt5 == 2)
+            {
+                if (kn.LoadDataDK("QuyDinhKTKLDK", "@MaKTKL", textMaKTKL5.Text).Rows.Count == 0)
+                    XtraMessageBox.Show("Mã khen thưởng, kỉ luật này chưa có trong danh sách");
+                else
+                {
+                    kn.QuyDinhKTKL("SuaKTKL", textMaKTKL5.Text, textTenQD5.Text, textSoTien5.Text);
+                }
+            }
+            else if (kt5 == 3)
+            {
+                try
+                {
+                    if (kn.LoadDataDK("QuyDinhKTKLDK", "@MaKTKL", textMaKTKL5.Text).Rows.Count == 0)
+                        XtraMessageBox.Show("Không tìm thấy mã quyết định KTKL để xóa ");
+                    else
+                    {
+                        kn.Xoa("XoaKTKL", "@MaKTKL", textMaKTKL5.Text);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    XtraMessageBox.Show(ex.Message);
+                }
+
+            }
+            getData5();
+            kt5 = 0;
+        }
+        public void getData6()
+        {
+            KetNoi kn = new KetNoi();
+            dataGridView6.DataSource = kn.LoadData("DanhSachKhenThuongKiLuat");
+        }
+        private void dataGridView6_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+
+            try
+            {
+                DataGridViewRow row = new DataGridViewRow();
+                row = dataGridView6.Rows[e.RowIndex];
+                textMaKTKL6.Text = row.Cells[1].Value.ToString();
+                textMaNV6.Text = row.Cells[0].Value.ToString();
+                textNgay6.Text = row.Cells[2].Value.ToString().Substring(0, 10);
+                textGhiChu6.Text = row.Cells[3].Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message);
+            }
+        }
+        private void butThem6_Click(object sender, EventArgs e)
+        {
+            kt6 = 1;
+        }
+
+        private void butSua6_Click(object sender, EventArgs e)
+        {
+            kt6 = 2;
+        }
+
+        private void butXoa6_Click(object sender, EventArgs e)
+        {
+            kt6 = 3;
+        }
+
+        private void butLuu6_Click(object sender, EventArgs e)
+        {
+            KetNoi kn = new KetNoi();
+            if (kt6 == 1)
+            {
+                if (kn.LoadDataDK_2DK("DanhSachKTKLDK", "@MaKTKL", "@MaNV", textMaKTKL6.Text, textMaNV6.Text).Rows.Count == 1)
+                    XtraMessageBox.Show("Nhân viên này đã được trao quyêt định");
+                else
+                {
+                    kn.DanhSachKTKL("ThemDanhSachKTKL", textMaKTKL6.Text, textMaNV6.Text, textNgay6.Text, textGhiChu6.Text);
+                }
+            }
+            else if (kt6 == 2)
+            {
+                if (kn.LoadDataDK_2DK("DanhSachKTKLDK", "@MaKTKL", "@MaNV", textMaKTKL6.Text, textMaNV6.Text).Rows.Count == 0)
+                    XtraMessageBox.Show("Mã quyết định này chưa có");
+                else
+                {
+                    kn.DanhSachKTKL("SuaDanhSachKTKL", textMaKTKL6.Text, textMaNV6.Text, textNgay6.Text, textGhiChu6.Text);
+                }
+            }
+            else if (kt6 == 3)
+            {
+                try
+                {
+                    if (kn.LoadDataDK_2DK("DanhSachKTKLDK", "@MaKTKL", "@MaNV", textMaKTKL6.Text, textMaNV6.Text).Rows.Count == 0)
+                        XtraMessageBox.Show("Không tìm thấy mã quyết định KTKL để xóa ");
+                    else
+                    {
+                        kn.Xoa_2DK("XoaDanhSachKTKL", "@MaKTKL", "@MaNV", textMaKTKL6.Text, textMaNV6.Text);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    XtraMessageBox.Show(ex.Message);
+                }
+
+            }
+            getData6();
+            kt6 = 0;
+        }
+
+        private void butXuat_Click(object sender, EventArgs e)
+        {
+            KetNoi kn = new KetNoi();
+            DataTable dt = kn.LoadData("XuatDanhSachKTKL");
+
+            if (dt.Rows.Count == 0)
+                XtraMessageBox.Show("Không có dữ liệu để xuất");
+            else
+            {
+
+                kn.LoadDataSet("XuatDanhSachKTKL").WriteXml(@"D:\'Danh sách khen thưởng, kỉ luật'.xls");
+                XtraMessageBox.Show("Xuất thành công");
+            }
+>>>>>>> refs/remotes/origin/master
         }
     }
 }
