@@ -43,6 +43,7 @@ namespace QuanLyNhanVien
             dt.Columns[12].ColumnName = "Email";
             dt.Columns[13].ColumnName = "Nơi ở";
             dt.Columns[14].ColumnName = "Nơi sinh";
+            searchLookUpEdit1.Properties.DataSource = dt;
         }
         public void getData2()
         {
@@ -148,6 +149,7 @@ namespace QuanLyNhanVien
             textNoiSinh.Text = value14.ToString();
             textEmail.Text = value15.ToString();
         }
+        //nhanvien
         private void butThem1_Click(object sender, EventArgs e)
         {
             kt1 = 1;
