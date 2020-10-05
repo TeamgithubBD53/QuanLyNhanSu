@@ -1205,21 +1205,14 @@
             // 
             // btnThemChucVu
             // 
-<<<<<<< HEAD
+
             this.btnThemChucVu.Location = new System.Drawing.Point(97, 3);
             this.btnThemChucVu.Name = "btnThemChucVu";
             this.btnThemChucVu.Size = new System.Drawing.Size(94, 29);
             this.btnThemChucVu.TabIndex = 7;
             this.btnThemChucVu.Text = "Thêm";
             this.btnThemChucVu.Click += new System.EventHandler(this.btnThemChucVu_Click);
-=======
-            this.butThem.Location = new System.Drawing.Point(97, 3);
-            this.butThem.Name = "butThem";
-            this.butThem.Size = new System.Drawing.Size(94, 29);
-            this.butThem.TabIndex = 7;
-            this.butThem.Text = "Thêm";
-            this.butThem.Click += new System.EventHandler(this.butThem_Click);
->>>>>>> refs/remotes/origin/master
+
             // 
             // textTenCVChucVu
             // 
@@ -1271,56 +1264,24 @@
             // 
             // btnLuuChucVu
             // 
-<<<<<<< HEAD
+
             this.btnLuuChucVu.Location = new System.Drawing.Point(232, 229);
             this.btnLuuChucVu.Name = "btnLuuChucVu";
             this.btnLuuChucVu.Size = new System.Drawing.Size(94, 29);
             this.btnLuuChucVu.TabIndex = 10;
             this.btnLuuChucVu.Text = "Lưu";
-=======
-            this.butLuu.Location = new System.Drawing.Point(232, 229);
-            this.butLuu.Name = "butLuu";
-            this.butLuu.Size = new System.Drawing.Size(94, 29);
-            this.butLuu.TabIndex = 10;
-            this.butLuu.Text = "Lưu";
-            this.butLuu.Click += new System.EventHandler(this.butLuu_Click);
->>>>>>> refs/remotes/origin/master
-            // 
-            // btnSuaChucVu
-            // 
-<<<<<<< HEAD
-            this.btnSuaChucVu.Location = new System.Drawing.Point(232, 3);
-            this.btnSuaChucVu.Name = "btnSuaChucVu";
-            this.btnSuaChucVu.Size = new System.Drawing.Size(94, 29);
-            this.btnSuaChucVu.TabIndex = 8;
-            this.btnSuaChucVu.Text = "Sửa";
-            this.btnSuaChucVu.Click += new System.EventHandler(this.btnSuaChucVu_Click);
-=======
-            this.butSua.Location = new System.Drawing.Point(232, 3);
-            this.butSua.Name = "butSua";
-            this.butSua.Size = new System.Drawing.Size(94, 29);
-            this.butSua.TabIndex = 8;
-            this.butSua.Text = "Sửa";
-            this.butSua.Click += new System.EventHandler(this.butSua_Click);
->>>>>>> refs/remotes/origin/master
-            // 
+
+
             // btnXoaChucVu
             // 
-<<<<<<< HEAD
+
             this.btnXoaChucVu.Location = new System.Drawing.Point(365, 3);
             this.btnXoaChucVu.Name = "btnXoaChucVu";
             this.btnXoaChucVu.Size = new System.Drawing.Size(94, 29);
             this.btnXoaChucVu.TabIndex = 9;
             this.btnXoaChucVu.Text = "Xóa";
             this.btnXoaChucVu.Click += new System.EventHandler(this.btnXoaChucVu_Click);
-=======
-            this.butXoa.Location = new System.Drawing.Point(365, 3);
-            this.butXoa.Name = "butXoa";
-            this.butXoa.Size = new System.Drawing.Size(94, 29);
-            this.butXoa.TabIndex = 9;
-            this.butXoa.Text = "Xóa";
-            this.butXoa.Click += new System.EventHandler(this.butXoa_Click);
->>>>>>> refs/remotes/origin/master
+
             // 
             // dataGridViewChucVu
             // 
