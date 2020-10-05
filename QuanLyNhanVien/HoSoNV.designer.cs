@@ -771,7 +771,7 @@
             this.butSua2.Size = new System.Drawing.Size(94, 29);
             this.butSua2.TabIndex = 15;
             this.butSua2.Text = "Sửa";
-            this.butSua2.Click += new System.EventHandler(this.butSua2_Click_1);
+            this.butSua2.Click += new System.EventHandler(this.butSua2_Click);
             // 
             // butXoa2
             // 
