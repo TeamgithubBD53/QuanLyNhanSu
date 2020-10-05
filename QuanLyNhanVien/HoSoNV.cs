@@ -43,6 +43,7 @@ namespace QuanLyNhanVien
             dt.Columns[12].ColumnName = "Email";
             dt.Columns[13].ColumnName = "Nơi ở";
             dt.Columns[14].ColumnName = "Nơi sinh";
+            searchLookUpEdit1.Properties.DataSource = dt;
         }
         public void getData2()
         {
@@ -148,6 +149,7 @@ namespace QuanLyNhanVien
             textNoiSinh.Text = value14.ToString();
             textEmail.Text = value15.ToString();
         }
+        //nhanvien
         private void butThem1_Click(object sender, EventArgs e)
         {
             kt1 = 1;
@@ -222,6 +224,15 @@ namespace QuanLyNhanVien
         {
             kt2 = 1;
         }
+        private void butSua2_Click(object sender, EventArgs e)
+        {
+            kt2 = 2;
+        }
+
+        private void butXoa2_Click(object sender, EventArgs e)
+        {
+            kt2 = 3;
+        }
 
 
         private void butLuu2_Click(object sender, EventArgs e)
@@ -267,16 +278,5 @@ namespace QuanLyNhanVien
         }
 
 
-        private void butSua2_Click_1(object sender, EventArgs e)
-        {
-            kt2 = 2;
-        }
-
-        private void butXoa2_Click(object sender, EventArgs e)
-        {
-            kt2 = 3;
-        }
-
-       
     }
 }
