@@ -402,21 +402,7 @@ namespace QuanLyNhanVien
             getData5();
             kt5 = 0;
         }
-        private void dataGridView5_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            try
-            {
-                DataGridViewRow row = new DataGridViewRow();
-                row = dataGridView5.Rows[e.RowIndex];
-                textMaKTKL5.Text = row.Cells[0].Value.ToString();
-                textTenQD5.Text = row.Cells[1].Value.ToString();
-                textSoTien5.Text = row.Cells[2].Value.ToString();
-            }
-            catch (Exception ex)
-            {
-                XtraMessageBox.Show(ex.Message);
-            }
-        }
+      
 
         public void getData6()
         {
