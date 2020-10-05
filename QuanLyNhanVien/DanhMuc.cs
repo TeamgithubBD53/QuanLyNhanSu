@@ -317,9 +317,6 @@ namespace QuanLyNhanVien
                 XtraMessageBox.Show(ex.Message);
             }
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
         private void btnThemChucVu_Click(object sender, EventArgs e)
         {
             kt1 = 1;
@@ -333,7 +330,7 @@ namespace QuanLyNhanVien
         private void btnXoaChucVu_Click(object sender, EventArgs e)
         {
             kt1 = 3;
-=======
+        }
         private void dataGridView5_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             try
@@ -349,10 +346,7 @@ namespace QuanLyNhanVien
                 XtraMessageBox.Show(ex.Message);
             }
         }
-        private void butThem_Click(object sender, EventArgs e)
-=======
         private void butThem5_Click(object sender, EventArgs e)
->>>>>>> 131dec7605813712ea7b130d4b7cab1d30068188
         {
             kt5 = 1;
         }
@@ -516,7 +510,6 @@ namespace QuanLyNhanVien
                 kn.LoadDataSet("XuatDanhSachKTKL").WriteXml(@"D:\'Danh sách khen thưởng, kỉ luật'.xls");
                 XtraMessageBox.Show("Xuất thành công");
             }
->>>>>>> refs/remotes/origin/master
         }
 
 
