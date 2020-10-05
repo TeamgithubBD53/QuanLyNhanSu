@@ -633,6 +633,7 @@
             this.butThem5.Size = new System.Drawing.Size(94, 29);
             this.butThem5.TabIndex = 10;
             this.butThem5.Text = "Thêm ";
+            this.butThem5.Click += new System.EventHandler(this.butThem5_Click);
             // 
             // butLuu5
             // 
@@ -641,6 +642,7 @@
             this.butLuu5.Size = new System.Drawing.Size(94, 29);
             this.butLuu5.TabIndex = 13;
             this.butLuu5.Text = "Lưu";
+            this.butLuu5.Click += new System.EventHandler(this.butLuu5_Click);
             // 
             // label13
             // 
@@ -658,6 +660,7 @@
             this.butXoa5.Size = new System.Drawing.Size(94, 29);
             this.butXoa5.TabIndex = 12;
             this.butXoa5.Text = "Xóa";
+            this.butXoa5.Click += new System.EventHandler(this.butXoa5_Click);
             // 
             // label14
             // 
@@ -675,6 +678,7 @@
             this.butSua5.Size = new System.Drawing.Size(94, 29);
             this.butSua5.TabIndex = 11;
             this.butSua5.Text = "Sửa";
+            this.butSua5.Click += new System.EventHandler(this.butSua5_Click);
             // 
             // label15
             // 
@@ -1205,14 +1209,12 @@
             // 
             // btnThemChucVu
             // 
-
             this.btnThemChucVu.Location = new System.Drawing.Point(97, 3);
             this.btnThemChucVu.Name = "btnThemChucVu";
             this.btnThemChucVu.Size = new System.Drawing.Size(94, 29);
             this.btnThemChucVu.TabIndex = 7;
             this.btnThemChucVu.Text = "Thêm";
             this.btnThemChucVu.Click += new System.EventHandler(this.btnThemChucVu_Click);
-
             // 
             // textTenCVChucVu
             // 
@@ -1264,24 +1266,27 @@
             // 
             // btnLuuChucVu
             // 
-
             this.btnLuuChucVu.Location = new System.Drawing.Point(232, 229);
             this.btnLuuChucVu.Name = "btnLuuChucVu";
             this.btnLuuChucVu.Size = new System.Drawing.Size(94, 29);
             this.btnLuuChucVu.TabIndex = 10;
             this.btnLuuChucVu.Text = "Lưu";
-
-
+            // 
+            // btnSuaChucVu
+            // 
+            this.btnSuaChucVu.Location = new System.Drawing.Point(0, 0);
+            this.btnSuaChucVu.Name = "btnSuaChucVu";
+            this.btnSuaChucVu.Size = new System.Drawing.Size(94, 29);
+            this.btnSuaChucVu.TabIndex = 11;
+            // 
             // btnXoaChucVu
             // 
-
             this.btnXoaChucVu.Location = new System.Drawing.Point(365, 3);
             this.btnXoaChucVu.Name = "btnXoaChucVu";
             this.btnXoaChucVu.Size = new System.Drawing.Size(94, 29);
             this.btnXoaChucVu.TabIndex = 9;
             this.btnXoaChucVu.Text = "Xóa";
             this.btnXoaChucVu.Click += new System.EventHandler(this.btnXoaChucVu_Click);
-
             // 
             // dataGridViewChucVu
             // 

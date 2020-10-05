@@ -497,7 +497,5 @@ namespace QuanLyNhanVien
                 XtraMessageBox.Show("Xuất thành công");
             }
         }
-
-
     }
 }
