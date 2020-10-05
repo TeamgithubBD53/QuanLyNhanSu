@@ -36,7 +36,7 @@ namespace QuanLyNhanVien
             textSoTien7.ReadOnly = true;
             getData7();
 
-            
+
         }
         public void getData3()
         {
@@ -65,21 +65,23 @@ namespace QuanLyNhanVien
         //}
         //bao hiem
 
-        private void butSua3_Click(object sender, EventArgs e)
-        {
-            kt3 = 2;
-        }
+ 
 
-        private void butXoa3_Click(object sender, EventArgs e)
-        {
-            kt3 = 3;
-        }
         private void butThem3_Click(object sender, EventArgs e)
         {
             kt3 = 1;
         }
+        private void butSua3_Click(object sender, EventArgs e)
+        {
+            kt3 = 2;
+        }
+        private void butXoa3_Click(object sender, EventArgs e)
+        {
+            kt3 = 3;
+        }
         private void butLuu3_Click(object sender, EventArgs e)
         {
+
             KetNoi kn = new KetNoi();
             if (kt3 == 1)
             {
@@ -120,6 +122,7 @@ namespace QuanLyNhanVien
             getData3();
             kt3 = 0;
         }
+
 
         private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -375,7 +378,7 @@ namespace QuanLyNhanVien
                 XtraMessageBox.Show(ex.Message);
             }
         }
-      
+
         public void getData6()
         {
             KetNoi kn = new KetNoi();
@@ -470,6 +473,6 @@ namespace QuanLyNhanVien
             }
         }
 
-        
+
     }
 }
