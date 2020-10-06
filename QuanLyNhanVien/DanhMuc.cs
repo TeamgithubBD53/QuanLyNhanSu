@@ -24,7 +24,7 @@ namespace QuanLyNhanVien
             getDataChucVu();
 
             dataGridViewChucVu.ReadOnly = true;
-            getData1();
+            getDataChucVu();
 
             dataGridView3.ReadOnly = true;
             getData3();
@@ -320,11 +320,7 @@ namespace QuanLyNhanVien
                 XtraMessageBox.Show(ex.Message);
             }
         }
-        public void getData1()
-        {
-            KetNoi kn = new KetNoi();
-            dataGridViewChucVu.DataSource = kn.LoadData("DSChuVu");
-        }
+       
         private void btnThemChucVu_Click(object sender, EventArgs e)
         {
             kt1 = 1;
@@ -377,7 +373,7 @@ namespace QuanLyNhanVien
                 }
 
             }
-            getData1();
+            getDataChucVu();
             kt1 = 0;
         }
         private void dataGridViewChucVu_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
