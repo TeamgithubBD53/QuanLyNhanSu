@@ -1274,10 +1274,12 @@
             // 
             // btnSuaChucVu
             // 
-            this.btnSuaChucVu.Location = new System.Drawing.Point(0, 0);
+            this.btnSuaChucVu.Location = new System.Drawing.Point(232, 3);
             this.btnSuaChucVu.Name = "btnSuaChucVu";
             this.btnSuaChucVu.Size = new System.Drawing.Size(94, 29);
             this.btnSuaChucVu.TabIndex = 11;
+            this.btnSuaChucVu.Text = "Sửa";
+            this.btnSuaChucVu.Click += new System.EventHandler(this.btnSuaChucVu_Click);
             // 
             // btnXoaChucVu
             // 
