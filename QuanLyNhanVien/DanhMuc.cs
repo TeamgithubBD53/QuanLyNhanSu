@@ -20,9 +20,7 @@ namespace QuanLyNhanVien
         public DanhMuc()
         {
             InitializeComponent();
-            dataGridViewChucVu.ReadOnly = true;
-            getDataChucVu();
-
+            
             dataGridViewChucVu.ReadOnly = true;
             getDataChucVu();
 
