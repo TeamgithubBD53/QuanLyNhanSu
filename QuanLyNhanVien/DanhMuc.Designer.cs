@@ -1065,6 +1065,7 @@
             this.butThem2.Size = new System.Drawing.Size(94, 29);
             this.butThem2.TabIndex = 0;
             this.butThem2.Text = "Thêm";
+            this.butThem2.Click += new System.EventHandler(this.butThem2_Click);
             // 
             // label7
             // 
@@ -1082,6 +1083,7 @@
             this.butSua2.Size = new System.Drawing.Size(94, 29);
             this.butSua2.TabIndex = 1;
             this.butSua2.Text = "Sửa";
+            this.butSua2.Click += new System.EventHandler(this.butSua2_Click);
             // 
             // label6
             // 
@@ -1099,6 +1101,7 @@
             this.butXoa2.Size = new System.Drawing.Size(94, 29);
             this.butXoa2.TabIndex = 2;
             this.butXoa2.Text = "Xóa";
+            this.butXoa2.Click += new System.EventHandler(this.butXoa2_Click);
             // 
             // label5
             // 
@@ -1116,6 +1119,7 @@
             this.butLuu2.Size = new System.Drawing.Size(94, 29);
             this.butLuu2.TabIndex = 3;
             this.butLuu2.Text = "Lưu";
+            this.butLuu2.Click += new System.EventHandler(this.butLuu2_Click);
             // 
             // textMaPB2
             // 
@@ -1152,6 +1156,7 @@
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.Size = new System.Drawing.Size(698, 312);
             this.dataGridView2.TabIndex = 7;
+            this.dataGridView2.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView2_CellMouseClick);
             // 
             // Column5
             // 

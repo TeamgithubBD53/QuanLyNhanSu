@@ -14,6 +14,7 @@ namespace QuanLyNhanVien
     public partial class DanhMuc : DevExpress.XtraEditors.XtraForm
     {
         public static int kt1 = 0; //kiểm tra thêm, sửa, xóa chức vụ
+        public static int kt2 = 0; // kiểm tra thêm, sửa, xóa phong ban
         public static int kt3 = 0; // kiểm tra thêm, sửa, xóa bao hiem
         public static int kt5 = 0; // kiểm tra thêm, sửa, xóa bao hiem
         public static int kt6 = 0; // kiểm tra thêm, sửa, xóa bao hiem
@@ -23,6 +24,9 @@ namespace QuanLyNhanVien
             
             dataGridViewChucVu.ReadOnly = true;
             getDataChucVu();
+
+            dataGridView2.ReadOnly = true;
+            getData2();
 
             dataGridView3.ReadOnly = true;
             getData3();
@@ -48,7 +52,11 @@ namespace QuanLyNhanVien
             KetNoi kn = new KetNoi();
             dataGridViewChucVu.DataSource = kn.LoadData("DSChucVu");
         }
-
+        public void getData2()
+        {
+            KetNoi kn = new KetNoi();
+            dataGridView2.DataSource = kn.LoadData("DSPhongBan");
+        }
         public void getData3()
         {
             KetNoi kn = new KetNoi();
@@ -556,6 +564,78 @@ namespace QuanLyNhanVien
             }
         }
 
-       
+        private void butThem2_Click(object sender, EventArgs e)
+        {
+            kt2 = 1;
+        }
+
+        private void butSua2_Click(object sender, EventArgs e)
+        {
+            kt2 = 2;
+        }
+
+        private void butXoa2_Click(object sender, EventArgs e)
+        {
+            kt2 = 3;
+        }
+
+        private void butLuu2_Click(object sender, EventArgs e)
+        {
+            KetNoi kn = new KetNoi();
+            if (kt2 == 1)
+            {
+                if (kn.LoadDataDK("PhongBanDK", "@MaPB", textMaPB2.Text).Rows.Count == 1)
+                    XtraMessageBox.Show("Mã phòng ban đã có trong danh sách");
+                else
+                {
+                    kn.PhongBan("ThemPB", textMaPB2.Text, textTenPB2.Text, textSDT.Text);
+                }
+            }
+            else if (kt2 == 2)
+            {
+                if (kn.LoadDataDK("PhongBanDK", "@MaPB", textMaPB2.Text).Rows.Count == 0)
+                    XtraMessageBox.Show("Mã phòng ban chưa có trong danh sách");
+                else
+                {
+                    kn.PhongBan("SuaPB", textMaPB2.Text, textTenPB2.Text, textSDT.Text);
+                }
+            }
+            else if (kt2 == 3)
+            {
+                try
+                {
+                    if (kn.LoadDataDK("PhongBanDK", "@MaPB", textMaPB2.Text).Rows.Count == 0)
+                        XtraMessageBox.Show("Không tìm thấy mã phòng ban để xóa ");
+                    else
+                    {
+                        kn.Xoa("XoaPB", "@MaPB", textMaPB2.Text);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    XtraMessageBox.Show(ex.Message);
+                }
+
+            }
+            getData2();
+            kt2 = 0;
+        }
+    
+
+        private void dataGridView2_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            try
+            {
+                DataGridViewRow row = new DataGridViewRow();
+                row = dataGridView2.Rows[e.RowIndex];
+                textMaPB2.Text = row.Cells[0].Value.ToString();
+                textTenPB2.Text = row.Cells[1].Value.ToString();
+                textSDT.Text = row.Cells[2].Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message);
+            }
+        }
     }
 }
