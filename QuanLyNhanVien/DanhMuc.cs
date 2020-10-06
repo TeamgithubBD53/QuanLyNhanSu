@@ -23,6 +23,9 @@ namespace QuanLyNhanVien
             dataGridViewChucVu.ReadOnly = true;
             getDataChucVu();
 
+            dataGridViewChucVu.ReadOnly = true;
+            getData1();
+
             dataGridView3.ReadOnly = true;
             getData3();
 
@@ -317,6 +320,11 @@ namespace QuanLyNhanVien
                 XtraMessageBox.Show(ex.Message);
             }
         }
+        public void getData1()
+        {
+            KetNoi kn = new KetNoi();
+            dataGridViewChucVu.DataSource = kn.LoadData("DSChuVu");
+        }
         private void btnThemChucVu_Click(object sender, EventArgs e)
         {
             kt1 = 1;
@@ -330,6 +338,62 @@ namespace QuanLyNhanVien
         private void btnXoaChucVu_Click(object sender, EventArgs e)
         {
             kt1 = 3;
+        }
+        private void btnLuuChucVu_Click(object sender, EventArgs e)
+        {
+            KetNoi kn = new KetNoi();
+            if (kt1 == 1)
+            {
+                if (kn.LoadDataDK("ChucVuDK", "@MaCV", textMaCV.Text).Rows.Count == 1)
+                    XtraMessageBox.Show("Mã chức vụ đã có trong danh sách");
+                else
+                {
+                    kn.ChucVu("ThemCV", textMaCV.Text, textTenCV.Text, textPhuCap.Text);
+                }
+            }
+            else if (kt1 == 2)
+            {
+                if (kn.LoadDataDK("ChucVuDK", "@MaCV", textMaCV.Text).Rows.Count == 0)
+                    XtraMessageBox.Show("Mã chức vụ chưa có trong danh sách");
+                else
+                {
+                    kn.ChucVu("SuaCV", textMaCV.Text, textTenCV.Text, textPhuCap.Text);
+                }
+            }
+            else if (kt1 == 3)
+            {
+                try
+                {
+                    if (kn.LoadDataDK("ChucVuDK", "@MaCV", textMaCV.Text).Rows.Count == 0)
+                        XtraMessageBox.Show("Không tìm thấy mã chức vụ để xóa ");
+                    else
+                    {
+                        kn.Xoa("XoaCV", "@MaChucVu", textMaCV.Text);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    XtraMessageBox.Show(ex.Message);
+                }
+
+            }
+            getData1();
+            kt1 = 0;
+        }
+        private void dataGridViewChucVu_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            try
+            {
+                DataGridViewRow row = new DataGridViewRow();
+                row = dataGridViewChucVu.Rows[e.RowIndex];
+                textMaCV.Text = row.Cells[0].Value.ToString();
+                textTenCV.Text = row.Cells[1].Value.ToString();
+                textPhuCap.Text = row.Cells[2].Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message);
+            }
         }
         private void dataGridView5_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -497,5 +561,7 @@ namespace QuanLyNhanVien
                 XtraMessageBox.Show("Xuất thành công");
             }
         }
+
+       
     }
 }

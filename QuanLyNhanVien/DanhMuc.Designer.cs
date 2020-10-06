@@ -134,11 +134,11 @@
             this.tabChucVu = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnThemChucVu = new DevExpress.XtraEditors.SimpleButton();
-            this.textTenCVChucVu = new System.Windows.Forms.TextBox();
+            this.textTenCV = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textPhuCapChucVu = new System.Windows.Forms.TextBox();
+            this.textPhuCap = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textMaCVChucVu = new System.Windows.Forms.TextBox();
+            this.textMaCV = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnLuuChucVu = new DevExpress.XtraEditors.SimpleButton();
             this.btnSuaChucVu = new DevExpress.XtraEditors.SimpleButton();
@@ -1193,11 +1193,11 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Lavender;
             this.panel1.Controls.Add(this.btnThemChucVu);
-            this.panel1.Controls.Add(this.textTenCVChucVu);
+            this.panel1.Controls.Add(this.textTenCV);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.textPhuCapChucVu);
+            this.panel1.Controls.Add(this.textPhuCap);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.textMaCVChucVu);
+            this.panel1.Controls.Add(this.textMaCV);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.btnLuuChucVu);
             this.panel1.Controls.Add(this.btnSuaChucVu);
@@ -1216,12 +1216,12 @@
             this.btnThemChucVu.Text = "Thêm";
             this.btnThemChucVu.Click += new System.EventHandler(this.btnThemChucVu_Click);
             // 
-            // textTenCVChucVu
+            // textTenCV
             // 
-            this.textTenCVChucVu.Location = new System.Drawing.Point(230, 116);
-            this.textTenCVChucVu.Name = "textTenCVChucVu";
-            this.textTenCVChucVu.Size = new System.Drawing.Size(229, 23);
-            this.textTenCVChucVu.TabIndex = 2;
+            this.textTenCV.Location = new System.Drawing.Point(230, 116);
+            this.textTenCV.Name = "textTenCV";
+            this.textTenCV.Size = new System.Drawing.Size(229, 23);
+            this.textTenCV.TabIndex = 2;
             // 
             // label1
             // 
@@ -1232,12 +1232,12 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Mã chức vụ:";
             // 
-            // textPhuCapChucVu
+            // textPhuCap
             // 
-            this.textPhuCapChucVu.Location = new System.Drawing.Point(230, 169);
-            this.textPhuCapChucVu.Name = "textPhuCapChucVu";
-            this.textPhuCapChucVu.Size = new System.Drawing.Size(229, 23);
-            this.textPhuCapChucVu.TabIndex = 1;
+            this.textPhuCap.Location = new System.Drawing.Point(230, 169);
+            this.textPhuCap.Name = "textPhuCap";
+            this.textPhuCap.Size = new System.Drawing.Size(229, 23);
+            this.textPhuCap.TabIndex = 1;
             // 
             // label2
             // 
@@ -1248,12 +1248,12 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Tên chức vụ:";
             // 
-            // textMaCVChucVu
+            // textMaCV
             // 
-            this.textMaCVChucVu.Location = new System.Drawing.Point(230, 57);
-            this.textMaCVChucVu.Name = "textMaCVChucVu";
-            this.textMaCVChucVu.Size = new System.Drawing.Size(229, 23);
-            this.textMaCVChucVu.TabIndex = 0;
+            this.textMaCV.Location = new System.Drawing.Point(230, 57);
+            this.textMaCV.Name = "textMaCV";
+            this.textMaCV.Size = new System.Drawing.Size(229, 23);
+            this.textMaCV.TabIndex = 0;
             // 
             // label3
             // 
@@ -1271,6 +1271,7 @@
             this.btnLuuChucVu.Size = new System.Drawing.Size(94, 29);
             this.btnLuuChucVu.TabIndex = 10;
             this.btnLuuChucVu.Text = "Lưu";
+            this.btnLuuChucVu.Click += new System.EventHandler(this.btnLuuChucVu_Click);
             // 
             // btnSuaChucVu
             // 
@@ -1304,6 +1305,7 @@
             this.dataGridViewChucVu.RowTemplate.Height = 24;
             this.dataGridViewChucVu.Size = new System.Drawing.Size(651, 347);
             this.dataGridViewChucVu.TabIndex = 6;
+            this.dataGridViewChucVu.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewChucVu_CellMouseClick);
             // 
             // Column1
             // 
@@ -1463,9 +1465,9 @@
         private DevExpress.XtraEditors.SimpleButton butSua2;
         private DevExpress.XtraEditors.SimpleButton butThem2;
         private System.Windows.Forms.TabPage tabChucVu;
-        private System.Windows.Forms.TextBox textTenCVChucVu;
-        private System.Windows.Forms.TextBox textPhuCapChucVu;
-        private System.Windows.Forms.TextBox textMaCVChucVu;
+        private System.Windows.Forms.TextBox textTenCV;
+        private System.Windows.Forms.TextBox textPhuCap;
+        private System.Windows.Forms.TextBox textMaCV;
         private DevExpress.XtraEditors.SimpleButton btnLuuChucVu;
         private DevExpress.XtraEditors.SimpleButton btnXoaChucVu;
         private DevExpress.XtraEditors.SimpleButton btnSuaChucVu;
