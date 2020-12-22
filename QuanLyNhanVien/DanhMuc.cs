@@ -45,8 +45,6 @@ namespace QuanLyNhanVien
             getData7();
             LoadMaKTKL6();
             LoadMaNV6();
-            LoadMaBH7();
-            LoadMaNV7();
         }
 
         public void getDataChucVu()
@@ -664,25 +662,5 @@ namespace QuanLyNhanVien
                 textMaNV6.Items.Add(dt.Rows[i][0]);
             }
         }
-        public void LoadMaBH7()
-        {
-            KetNoi kn = new KetNoi();
-            DataTable dt = kn.LoadData("DanhSachMaBH");
-            for (int i = 0; i < dt.Rows.Count; i++)
-            {
-                textMaBH7.Items.Add(dt.Rows[i][0]);
-            }
-        }
-        public void LoadMaNV7()
-        {
-            KetNoi kn = new KetNoi();
-            DataTable dt = kn.LoadData("XuatDanhSachNV");
-            for (int i = 0; i < dt.Rows.Count; i++)
-            {
-                textMaNV7.Items.Add(dt.Rows[i][0]);
-            }
-        }
-
-        
     }
 }

@@ -19,7 +19,7 @@ namespace QuanLyNhanVien
             Application.SetCompatibleTextRenderingDefault(false);
 
             BonusSkins.Register();
-            Application.Run(new DanhMuc());
+            Application.Run(new DangNhap());
         }
     }
 }
