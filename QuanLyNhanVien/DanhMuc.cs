@@ -436,7 +436,7 @@ namespace QuanLyNhanVien
                     XtraMessageBox.Show("Mã khen thưởng, kỉ luật này đã có trong danh sách");
                 else
                 {
-                    kn.QuyDinhKTKL("ThemKTKL", textMaKTKL5.Text, textMaKTKL5.Text, textSoTien5.Text);
+                    kn.QuyDinhKTKL("ThemKTKL", textMaKTKL5.Text, textTenQD5.Text, textSoTien5.Text);
                 }
             }
             else if (kt5 == 2)
