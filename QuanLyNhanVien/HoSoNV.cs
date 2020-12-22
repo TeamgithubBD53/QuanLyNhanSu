@@ -22,6 +22,10 @@ namespace QuanLyNhanVien
             dataGridView2.ReadOnly = true;
             getData1();
             getData2();
+            LoadMaCV1();
+            LoadMaPB1();
+            LoadMaTD1();
+            LoadMaNV2();
         }
         public void  getData1()
         {
@@ -276,7 +280,45 @@ namespace QuanLyNhanVien
             getData2();
             kt2 = 0;
         }
+        public void LoadMaNV2()
+        {
+            KetNoi kn = new KetNoi();
+            DataTable dt = kn.LoadData("XuatDanhSachNV");
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                textMaNV2.Items.Add(dt.Rows[i][0]);
+            }
+        }
 
+        public void LoadMaTD1()
+        {
+            KetNoi kn = new KetNoi();
+            DataTable dt = kn.LoadData("DanhSachMaTD");
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                textMaTD1.Items.Add(dt.Rows[i][0]);
+            }
+        }
 
+        public void LoadMaCV1()
+        {
+            KetNoi kn = new KetNoi();
+            DataTable dt = kn.LoadData("DanhSachMaCV");
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                textMaCV1.Items.Add(dt.Rows[i][0]);
+            }
+        }
+
+        public void LoadMaPB1()
+        {
+            KetNoi kn = new KetNoi();
+            DataTable dt = kn.LoadData("DanhSachMaPB");
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                textMaPB1.Items.Add(dt.Rows[i][0]);
+            }
+        }
+      
     }
 }

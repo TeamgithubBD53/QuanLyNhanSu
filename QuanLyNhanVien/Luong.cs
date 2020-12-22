@@ -20,6 +20,7 @@ namespace QuanLyNhanVien
             dataGridView1.ReadOnly = true;
             textLuongHD.ReadOnly = true;
             getData1();
+            LoadMaNV();
         }
         public void getData1()
         {
@@ -153,5 +154,15 @@ namespace QuanLyNhanVien
             }
 
         }
+        public void LoadMaNV()
+        {
+            KetNoi kn = new KetNoi();
+            DataTable dt = kn.LoadData("XuatDanhSachNV");
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                textMaNV.Items.Add(dt.Rows[i][0]);
+            }
+        }
+       
     }
 }

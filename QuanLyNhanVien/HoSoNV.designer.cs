@@ -275,6 +275,9 @@
             // textGioiTinh1
             // 
             this.textGioiTinh1.FormattingEnabled = true;
+            this.textGioiTinh1.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
             this.textGioiTinh1.Location = new System.Drawing.Point(490, 206);
             this.textGioiTinh1.Name = "textGioiTinh1";
             this.textGioiTinh1.Size = new System.Drawing.Size(108, 24);

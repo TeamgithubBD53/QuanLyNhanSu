@@ -43,8 +43,10 @@ namespace QuanLyNhanVien
             dataGridView7.ReadOnly = true;
             textSoTien7.ReadOnly = true;
             getData7();
-
-
+            LoadMaKTKL6();
+            LoadMaNV6();
+            LoadMaBH7();
+            LoadMaNV7();
         }
 
         public void getDataChucVu()
@@ -67,24 +69,26 @@ namespace QuanLyNhanVien
             KetNoi kn = new KetNoi();
             dataGridView5.DataSource = kn.LoadData("QuyetDinhKTKL");
         }
-        //private void dataGridView3_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        //{
-        //    try
-        //    {
-        //        DataGridViewRow row = new DataGridViewRow();
-        //        row = dataGridView3.Rows[e.RowIndex];
-        //        textMaBH3.Text = row.Cells[0].Value.ToString();
-        //        textTenBH3.Text = row.Cells[1].Value.ToString();
-        //        textTiLeBH3.Text = row.Cells[2].Value.ToString();
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        XtraMessageBox.Show(ex.Message);
-        //    }
-        //}
+       
+        private void DataGridView3_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                DataGridViewRow row = new DataGridViewRow();
+                row = dataGridView3.Rows[e.RowIndex];
+                textMaBH3.Text = row.Cells[0].Value.ToString();
+                textTenBH3.Text = row.Cells[1].Value.ToString();
+                textTiLeBH3.Text = row.Cells[2].Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message);
+            }
+
+        }
         //bao hiem
 
- 
+
 
         private void butThem3_Click(object sender, EventArgs e)
         {
@@ -142,22 +146,6 @@ namespace QuanLyNhanVien
             kt3 = 0;
         }
 
-
-        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                DataGridViewRow row = new DataGridViewRow();
-                row = dataGridView3.Rows[e.RowIndex];
-                textMaBH3.Text = row.Cells[0].Value.ToString();
-                textTenBH3.Text = row.Cells[1].Value.ToString();
-                textTiLeBH3.Text = row.Cells[2].Value.ToString();
-            }
-            catch (Exception ex)
-            {
-                XtraMessageBox.Show(ex.Message);
-            }
-        }
 
         //tuyển dụng
 
@@ -658,5 +646,43 @@ namespace QuanLyNhanVien
                 XtraMessageBox.Show(ex.Message);
             }
         }
+        public void LoadMaKTKL6()
+        {
+            KetNoi kn = new KetNoi();
+            DataTable dt = kn.LoadData("QuyetDinhKTKL");
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                textMaKTKL6.Items.Add(dt.Rows[i][0]);
+            }
+        }
+        public void LoadMaNV6()
+        {
+            KetNoi kn = new KetNoi();
+            DataTable dt = kn.LoadData("XuatDanhSachNV");
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                textMaNV6.Items.Add(dt.Rows[i][0]);
+            }
+        }
+        public void LoadMaBH7()
+        {
+            KetNoi kn = new KetNoi();
+            DataTable dt = kn.LoadData("DanhSachMaBH");
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                textMaBH7.Items.Add(dt.Rows[i][0]);
+            }
+        }
+        public void LoadMaNV7()
+        {
+            KetNoi kn = new KetNoi();
+            DataTable dt = kn.LoadData("XuatDanhSachNV");
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                textMaNV7.Items.Add(dt.Rows[i][0]);
+            }
+        }
+
+        
     }
 }
