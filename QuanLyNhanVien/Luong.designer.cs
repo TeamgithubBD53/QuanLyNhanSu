@@ -127,7 +127,6 @@
             this.textMaNV.Name = "textMaNV";
             this.textMaNV.Size = new System.Drawing.Size(195, 24);
             this.textMaNV.TabIndex = 16;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
