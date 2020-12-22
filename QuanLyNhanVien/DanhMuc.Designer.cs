@@ -45,11 +45,6 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.dataGridView7 = new System.Windows.Forms.DataGridView();
-            this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
             this.textNgay6 = new DevExpress.XtraEditors.DateEdit();
@@ -148,6 +143,11 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabDanhMuc = new System.Windows.Forms.TabControl();
+            this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textNgayKT7.Properties.CalendarTimeProperties)).BeginInit();
@@ -309,9 +309,9 @@
             this.label20.AutoSize = true;
             this.label20.Location = new System.Drawing.Point(370, 90);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(94, 17);
+            this.label20.Size = new System.Drawing.Size(100, 17);
             this.label20.TabIndex = 8;
-            this.label20.Text = "Mã nhân viên:";
+            this.label20.Text = "Tên nhân viên:";
             // 
             // label23
             // 
@@ -327,9 +327,9 @@
             this.label21.AutoSize = true;
             this.label21.Location = new System.Drawing.Point(22, 90);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(90, 17);
+            this.label21.Size = new System.Drawing.Size(96, 17);
             this.label21.TabIndex = 9;
-            this.label21.Text = "Mã bảo hiểm:";
+            this.label21.Text = "Tên bảo hiểm:";
             // 
             // label22
             // 
@@ -357,46 +357,6 @@
             this.dataGridView7.Size = new System.Drawing.Size(799, 255);
             this.dataGridView7.TabIndex = 13;
             this.dataGridView7.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView7_CellMouseClick);
-            // 
-            // Column20
-            // 
-            this.Column20.DataPropertyName = "MaNhanVien";
-            this.Column20.HeaderText = "Mã nhân viên";
-            this.Column20.MinimumWidth = 6;
-            this.Column20.Name = "Column20";
-            this.Column20.Width = 150;
-            // 
-            // Column21
-            // 
-            this.Column21.DataPropertyName = "MaBaoHiem";
-            this.Column21.HeaderText = "Mã bảo hiểm";
-            this.Column21.MinimumWidth = 6;
-            this.Column21.Name = "Column21";
-            this.Column21.Width = 150;
-            // 
-            // Column22
-            // 
-            this.Column22.DataPropertyName = "NgayBatDau";
-            this.Column22.HeaderText = "Ngày bắt đầu";
-            this.Column22.MinimumWidth = 6;
-            this.Column22.Name = "Column22";
-            this.Column22.Width = 150;
-            // 
-            // Column23
-            // 
-            this.Column23.DataPropertyName = "NgayHetHan";
-            this.Column23.HeaderText = "Ngày hết hạn";
-            this.Column23.MinimumWidth = 6;
-            this.Column23.Name = "Column23";
-            this.Column23.Width = 150;
-            // 
-            // Column24
-            // 
-            this.Column24.DataPropertyName = "SoTienDongMotThang";
-            this.Column24.HeaderText = "Số tiền đóng/tháng";
-            this.Column24.MinimumWidth = 6;
-            this.Column24.Name = "Column24";
-            this.Column24.Width = 150;
             // 
             // tabPage1
             // 
@@ -1350,6 +1310,46 @@
             this.tabDanhMuc.SelectedIndex = 0;
             this.tabDanhMuc.Size = new System.Drawing.Size(1059, 748);
             this.tabDanhMuc.TabIndex = 0;
+            // 
+            // Column20
+            // 
+            this.Column20.DataPropertyName = "HoTen";
+            this.Column20.HeaderText = "Tên nhân viên";
+            this.Column20.MinimumWidth = 6;
+            this.Column20.Name = "Column20";
+            this.Column20.Width = 150;
+            // 
+            // Column21
+            // 
+            this.Column21.DataPropertyName = "Ten";
+            this.Column21.HeaderText = "Tên bảo hiểm";
+            this.Column21.MinimumWidth = 6;
+            this.Column21.Name = "Column21";
+            this.Column21.Width = 150;
+            // 
+            // Column22
+            // 
+            this.Column22.DataPropertyName = "NgayBatDau";
+            this.Column22.HeaderText = "Ngày bắt đầu";
+            this.Column22.MinimumWidth = 6;
+            this.Column22.Name = "Column22";
+            this.Column22.Width = 150;
+            // 
+            // Column23
+            // 
+            this.Column23.DataPropertyName = "NgayHetHan";
+            this.Column23.HeaderText = "Ngày hết hạn";
+            this.Column23.MinimumWidth = 6;
+            this.Column23.Name = "Column23";
+            this.Column23.Width = 150;
+            // 
+            // Column24
+            // 
+            this.Column24.DataPropertyName = "SoTienDongMotThang";
+            this.Column24.HeaderText = "Số tiền đóng/tháng";
+            this.Column24.MinimumWidth = 6;
+            this.Column24.Name = "Column24";
+            this.Column24.Width = 150;
             // 
             // DanhMuc
             // 

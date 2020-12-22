@@ -249,6 +249,7 @@ namespace QuanLyNhanVien
         {
             KetNoi kn = new KetNoi();
             dataGridView7.DataSource = kn.LoadData("BHNhanVien");
+            Hienthi_MS();
         }
 
         private void butThem7_Click(object sender, EventArgs e)
@@ -271,32 +272,32 @@ namespace QuanLyNhanVien
             KetNoi kn = new KetNoi();
             if (kt7 == 1)
             {
-                if (kn.LoadDataDK_2DK("DanhSachBHNV", "@MaBH", "@MaNV", textMaBH7.Text, textMaNV7.Text).Rows.Count == 1)
+                if (kn.LoadDataDK_2DK("DanhSachBHNV", "@MaBH", "@MaNV", textMaBH7.SelectedValue.ToString(), textMaNV7.SelectedValue.ToString()).Rows.Count == 1)
                     XtraMessageBox.Show("Mã bảo hiểm này đã có trong danh sách");
                 else
                 {
-                    kn.BaoHiemNV("ThemBaoHiemNV", textMaBH7.Text, textMaNV7.Text, textNgayBD7.Text, textNgayKT7.Text, textSoTien7.Text);
+                    kn.BaoHiemNV("ThemBaoHiemNV", textMaBH7.SelectedValue.ToString(), textMaNV7.SelectedValue.ToString(), textNgayBD7.Text, textNgayKT7.Text, textSoTien7.Text);
                 }
             }
             else if (kt7 == 2)
             {
 
-                if (kn.LoadDataDK_2DK("DanhSachBHNV", "@MaBH", "@MaNV", textMaBH7.Text, textMaNV7.Text).Rows.Count == 0)
+                if (kn.LoadDataDK_2DK("DanhSachBHNV", "@MaBH", "@MaNV", textMaBH7.SelectedValue.ToString(), textMaNV7.SelectedValue.ToString()).Rows.Count == 0)
                     XtraMessageBox.Show("Mã bảo hiểm này chưa có trong danh sách");
                 else
                 {
-                    kn.BaoHiemNV("SuaBaoHiemNV", textMaBH7.Text, textMaNV7.Text, textNgayBD7.Text, textNgayKT7.Text, textSoTien7.Text);
+                    kn.BaoHiemNV("SuaBaoHiemNV", textMaBH7.SelectedValue.ToString(), textMaNV7.SelectedValue.ToString(), textNgayBD7.Text, textNgayKT7.Text, textSoTien7.Text);
                 }
             }
             else if (kt7 == 3)
             {
                 try
                 {
-                    if (kn.LoadDataDK_2DK("DanhSachBHNV", "@MaBH", "@MaNV", textMaBH7.Text, textMaNV7.Text).Rows.Count == 0)
+                    if (kn.LoadDataDK_2DK("DanhSachBHNV", "@MaBH", "@MaNV", textMaBH7.SelectedValue.ToString(), textMaNV7.SelectedValue.ToString()).Rows.Count == 0)
                         XtraMessageBox.Show("Mã bảo hiểm này đã có trong danh sách");
                     else
                     {
-                        kn.Xoa_2DK("XoaBaoHiemNV", "@MaBH", "@MaNV", textMaBH7.Text, textMaNV7.Text);
+                        kn.Xoa_2DK("XoaBaoHiemNV", "@MaBH", "@MaNV", textMaBH7.SelectedValue.ToString(), textMaNV7.SelectedValue.ToString());
                     }
                 }
                 catch (Exception ex)
@@ -315,8 +316,8 @@ namespace QuanLyNhanVien
             {
                 DataGridViewRow row = new DataGridViewRow();
                 row = dataGridView7.Rows[e.RowIndex];
-                textMaNV7.Text = row.Cells[0].Value.ToString();
-                textMaBH7.Text = row.Cells[1].Value.ToString();
+                textMaBH7.Text = row.Cells[0].Value.ToString();
+                textMaNV7.Text = row.Cells[1].Value.ToString();
                 textNgayBD7.Text = row.Cells[2].Value.ToString().Substring(0, 10);
                 textNgayKT7.Text = row.Cells[3].Value.ToString().Substring(0, 10);
                 textSoTien7.Text = row.Cells[4].Value.ToString();
@@ -326,7 +327,27 @@ namespace QuanLyNhanVien
                 XtraMessageBox.Show(ex.Message);
             }
         }
-       
+
+
+        public void Hienthi_MS()
+        {
+            KetNoi kn = new KetNoi();
+            
+            textMaBH7.DataSource = kn.LoadData("DanhSachBH");
+            textMaBH7.DisplayMember = "ten";
+            textMaBH7.ValueMember = "MaBaoHiem";
+            textMaBH7.SelectedValue = "MaBaoHiem";
+            textMaBH7.SelectedIndex = 0;
+
+            textMaNV7.DataSource = kn.LoadData("DanhSachNV");
+            textMaNV7.DisplayMember = "HoTen";
+            textMaNV7.ValueMember = "MaNhanVien";
+            textMaNV7.SelectedValue = "MaNhanVien";
+            textMaNV7.SelectedIndex = 0;
+        }
+        
+
+
         private void btnThemChucVu_Click(object sender, EventArgs e)
         {
             kt1 = 1;
